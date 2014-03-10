@@ -13,7 +13,9 @@ define(ROOT, $root);
         <link href="<?php echo get_template_directory_uri(); ?>/img/icons/favicon.ico" rel="shortcut icon">
         <link href="<?php echo get_template_directory_uri(); ?>/img/icons/touch.png" rel="apple-touch-icon-precomposed">
 
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="<?php echo ROOT; ?>/css/style.css" />  
+        <link rel="stylesheet" type="text/css" href="<?php echo ROOT; ?>/css/produit.css" /> 
         <link rel="stylesheet" type="text/css" href="<?php echo ROOT; ?>/css/normalize.css" />  
         <link rel="stylesheet" type="text/css" href="<?php echo ROOT; ?>/css/jquery.bxslider.css" />
 
@@ -33,6 +35,7 @@ define(ROOT, $root);
         });
         </script>
         <script src="<?php echo ROOT; ?>/js/jquery.bxslider.min.js"></script>  
+        <script src="<?php echo ROOT; ?>/js/produit.js"></script>  
 
 	</head>
 	<body>
