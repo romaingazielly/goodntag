@@ -180,18 +180,44 @@ header{
 	text-align: center;
 	text-transform: uppercase;
 }
+.latest_product .bx-wrapper, .latest_product .bx-viewport{
+	min-height: 300px;
+}
 .last_product{
 	float: left;
-	width: 50%;
+	width: 100%;
 }
 .last_product p{
 	margin: 0;
 	padding: 0;
 }
-.last_product img{
+.last_product_img{
 	border-bottom: 1px solid #e74c3c;
-	max-height: 170px;
-	min-height: 170px;
+	height:208px;
+}
+.last_product_img img{
+	max-width: 100%;
+}
+
+/*Slider latest product */
+.product_slider{
+	margin-top: 20px;
+}
+.latest_product .bx-wrapper .bx-pager{
+	height: 10px;
+	top: 0;
+}
+.latest_product .bx-wrapper .bx-pager.bx-default-pager a:hover, .latest_product .bx-wrapper .bx-pager.bx-default-pager a{
+	background: url(../img/btn_puce.jpg) no-repeat;
+	border-radius: 0;
+	height: 10px;
+	width: 10px;
+}
+.latest_product .bx-wrapper .bx-pager.bx-default-pager a:hover, .latest_product .bx-wrapper .bx-pager.bx-default-pager a.active{
+	background: url(../img/btn_puce_active.jpg) no-repeat;
+	border-radius: 0;
+	height: 10px;
+	width: 10px;
 }
 .last_product_infos{
 	color: black;
@@ -218,23 +244,32 @@ header{
 	width: 100%;
 	z-index: 2;
 }
-.brand_rubrique p{
+.brand_rubrique .black_rectangle{
 	background-color: black;
-	color: white;
-	font-size: 16px;
-	font-weight: bold;
 	height: 50px;
 	left: 50%;
-	line-height: 50px;
 	position:absolute;
 	margin-left: -100px;
 	margin-top: -25px;
 	opacity: 0.6;
-	text-transform: uppercase;
-	text-align: center;
 	top: 50%;
 	width: 200px;
+}
+.brand_rubrique p{
+	color: white;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 50px;
+	text-transform: uppercase;
+	text-align: center;
 	z-index: 1;
+	height: 50px;
+	left: 50%;
+	position:absolute;
+	margin-left: -100px;
+	margin-top: -25px;
+	top: 50%;
+	width: 200px;
 }
 
 .social{
@@ -278,11 +313,11 @@ header{
 
 @font-face {
 	font-family:'Font-Name';
-	src:url('../fonts/font-name.eot');
-	src:url('../fonts/font-name.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/font-name.woff') format('woff'),
-		url('../fonts/font-name.ttf') format('truetype'),
-		url('../fonts/font-name.svg#font-name') format('svg');
+	src:url('fonts/font-name.eot');
+	src:url('fonts/font-name.eot?#iefix') format('embedded-opentype'),
+		url('fonts/font-name.woff') format('woff'),
+		url('fonts/font-name.ttf') format('truetype'),
+		url('fonts/font-name.svg#font-name') format('svg');
     font-weight:normal;
     font-style:normal;
 }

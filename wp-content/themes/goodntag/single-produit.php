@@ -8,7 +8,7 @@
 			<p id="product_price">25,00€</p>
 			<a href="#" id="btn_vote"></a>
 		</div>
-		<h1 id="product_name">T-shirt Bear SFA</h1>
+		<h1 id="product_name"><?php echo $post->post_title ?></h1>
 
 		<!-- Popin Rating -->
 		<section class="product_vote">
@@ -20,9 +20,9 @@
 				</ul>
 				<aside class="resultats_vote">
 					<ul>
-						<li id="vote_bad_results">0%</li>
-						<li id="vote_neutral_results">0%</li>
-						<li id="vote_good_results">100%</li>
+						<li id="vote_bad_results"><span>0%</span></li>
+						<li id="vote_neutral_results"><span>0%</span></li>
+						<li id="vote_good_results"><span>100%</span></li>
 					</ul>
 				</aside>
 			</article>
@@ -46,13 +46,65 @@
 	<!-- Infos Lavage End -->
 
 	<!-- Promotion -->
-	<article class="promotion">
-		<img src="<?php echo ROOT;?>/img/promo.jpg">
+	<article class="promotion clear">
+		<div class="lock"></div>
+		<div class="zone_promo">Code promo</div>
 	</article>
 	<!-- Promotion End -->
 
-	
-<h1>Produit : <?php echo $post->post_title ?></h1>
+	<!-- Description -->
+	<article class="description">
+		<a id="description" href="#" class="description_off"></a>
+		<h1>M / BLANC / 100% COTON</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam elementum id velit vitae faucibus. Nam elementum Nullam vitae mauris sapien Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam elementum id velit vitae faucibus. Nam elementum Nullam vitae mauris sapien</p>
+	</article>
+	<!-- Description End -->
 
-Prix : <?php echo get_post_meta($post->ID, 'product_price', true) ?>
+	<!-- Liens Externes -->
+	<article class="external_links">
+		<a href="#" target="_blank"><img src="<?php echo ROOT;?>/img/sfa_histoire.jpg"></a>
+	</article>
+	<!-- Liens Externes End -->
+
+	<!-- Recommandations -->
+	<article class="recommandations clear">
+		<h1>Recommandations</h1>
+		<figure>
+			<img src="<?php echo ROOT;?>/img/otaku1.jpg" alt="Otaku - T-shirt Gameboy" title="Otaku - T-shirt Gameboy">
+			<figcaption>
+				<h2>Otaku</h2>
+				<h3>T-Shirt Gameboy</h3>
+				<p class="reco_price">25,00 €</p>
+			</figcaption>
+		</figure>
+
+		<figure>
+			<img src="<?php echo ROOT;?>/img/otaku1.jpg" alt="Otaku - T-shirt Gameboy" title="Otaku - T-shirt Gameboy">
+			<figcaption>
+				<h2>Otaku</h2>
+				<h3>T-Shirt Gameboy</h3>
+				<p class="reco_price">25,00 €</p>
+			</figcaption>
+		</figure>
+
+		<figure>
+			<img src="<?php echo ROOT;?>/img/otaku1.jpg" alt="Otaku - T-shirt Gameboy" title="Otaku - T-shirt Gameboy">
+			<figcaption>
+				<h2>Otaku</h2>
+				<h3>T-Shirt Gameboy</h3>
+				<p class="reco_price">25,00 €</p>
+			</figcaption>
+		</figure>
+
+		<figure>
+			<img src="<?php echo ROOT;?>/img/otaku1.jpg" alt="Otaku - T-shirt Gameboy" title="Otaku - T-shirt Gameboy">
+			<figcaption>
+				<h2>Otaku</h2>
+				<h3>T-Shirt Gameboy</h3>
+				<p class="reco_price">25,00 €</p>
+			</figcaption>
+		</figure>
+	</article>
+	<!-- Recommandations End -->
+
 </section>

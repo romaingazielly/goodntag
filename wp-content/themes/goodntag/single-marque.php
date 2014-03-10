@@ -33,28 +33,32 @@
 			<div class="brand_description">
 				<div id="btn_descr">Description</div>
 				<div id="text_descr">
-					<?php $descr = get_field("description");
-					echo $descr; ?>
+					
 				</div>
 			</div>
 
 			<div class="latest_product">
 				<h1>Derniers produits ajoutés:</h1>
+				<div class="product_slider">
 				<?php
-				$products = get_posts(array('post_type' => "produit", 'posts_per_page'=>2,'meta_key' => 'marque','order' => 'DESC', 'meta_value' => get_the_ID() ));
+				$products = get_posts(array('post_type' => "produit", 'posts_per_page'=>6,'meta_key' => 'marque','order' => 'DESC', 'meta_value' => get_the_ID() ));
         		foreach ($products as $product){
           			$image = get_field("image", $product->ID);
           			$prix = get_field("prix", $product->ID);?>
-          			
-          			<div class="last_product">
-          				<img src="<?php echo $image[0]['sizes']['brand_product']; ?>" alt="" />
-          				<div class="last_product_infos">
-          					<p id="product_brand"><?php echo the_title(); ?></p>
-          					<p id="product_name"><?php echo $product->post_title;; ?></p>
-          					<p id="product_price"><?php echo $prix; ?> €</p>
-          				</div>
+          			<div>
+	          			<div class="last_product">
+	          				<div class="last_product_img">
+	          					<img src="<?php echo $image[0]['sizes']['brand_product']; ?>" alt="" />
+	          				</div>
+	          				<div class="last_product_infos">
+	          					<p id="product_brand"><?php echo the_title(); ?></p>
+	          					<p id="product_name"><?php echo $product->post_title;; ?></p>
+	          					<p id="product_price"><?php echo $prix; ?> €</p>
+	          				</div>
+	          			</div>
           			</div>
           		<?php }	?>
+          		</div>
 			</div>
 
 			<div class="brand_cat">
@@ -63,6 +67,7 @@
 				<div class="brand_rubrique">
 					<a href="<?php echo $rubrique['lien']; ?>" target="_blank"></a>
 					<img src="<?php echo $rubrique['image']['sizes']['brand_rubrique'];?>" alt="" />
+					<span class="black_rectangle"></span>
 					<p><?php echo $rubrique['title']; ?></p>
 				</div>
 				<?php } ?>
@@ -99,6 +104,47 @@
 			$('.brand_slider').bxSlider({
 				controls:false
 			});
+			getDescription();
+			$('.product_slider').bxSlider({
+				infiniteLoop: false,
+			    slideWidth: 150,
+			    minSlides: 2,
+			    maxSlides: 2,
+			    controls:false,
+			    touchEnabled: true
+			  });
+		});
+
+		function getDescription(){
+			$.ajax({
+		        type: "post",
+		        url: "<?php echo ROOT; ?>/php/getDescriptionMore.php",
+		        data: {},
+		        success: function(data) {
+		            $(".brand_description #text_descr").html(data);   
+		        }
+		    });
+		}
+		$('.brand_description').on('click','.readmore', function(e){
+			e.preventDefault();
+			console.log('clic');
+			var text = $(this).parent();
+			var id = $(this).attr('data-id');
+			$.ajax({
+		        type: "post",
+		        url: "<?php echo ROOT; ?>/php/getDescription.php",
+		        data: {'id':id,},
+		        success: function(data) {
+					$(text).html(data);
+		        }
+		    });
+		});
+		$('.brand_description').on('click','.readless', function(e){
+			e.preventDefault();
+			
+			var text = $(this).parent();
+			var id = $(this).attr('data-id');
+			getDescription();
 		});
 
 	</script>
