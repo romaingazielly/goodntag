@@ -5,52 +5,64 @@ img { width:auto; max-width:100%; }
 \*------------------------------------*/
 .content_product { }
 .content_product hr { width:20%; margin:0 auto; border:0; height:1px; background:#dbdbdb; }
+
+/* Slider */
 .content_product #slider_product h1 { color:#2b2b2b; text-align:center; font:20px 'Open Sans'; text-transform:uppercase; padding:10px 0; z-index: 222222222;}
 .content_product #slider_product .slider_img {position:relative; background: url('../img/visuel_produit.jpg') no-repeat; height:442px;background-size: cover;}
 .content_product #slider_product .slider_img #product_price {height:30px; position:absolute; width:100%; bottom:0; line-height:30px; margin:0; background:rgba(0,0,0,0.3); color:#fff; text-transform:uppercase; text-align:center; font:bold 22px "Open Sans"; }
 .content_product #slider_product .slider_img #btn_vote { position:absolute; bottom:0; right:0;height:65px; width:65px; background:url('../img/vote.png') no-repeat; }
-.content_product #slider_product .product_vote { overflow:hidden; ; width: 100%; position: absolute; top: 0;}
-.content_product #slider_product .product_vote .vote { margin-top: 50%; left:0; width:100%; margin-left:100%; }
-.content_product #slider_product .product_vote .vote .smiley { width:100%; padding:0; }
-.content_product #slider_product .product_vote .vote .smiley li { display:inline-block; width:33.333333%; height:110px; float:left; list-style:none;  }
-.content_product #slider_product .product_vote .vote a { display:block; width:100%; height:110px; }
-.content_product #slider_product .product_vote .vote li.active a {border-bottom:solid 8px #e14a3a; }
-.content_product #slider_product .product_vote .vote #vote_bad {background: #dddddd url('../img/smiley_bad.png') no-repeat center;}
-.content_product #slider_product .product_vote .vote #vote_bad.active { background: #fff url('../img/smiley_bad.png') no-repeat center;}
-.content_product #slider_product .product_vote .vote #vote_neutral {background: #dddddd url('../img/smiley_neutral.png') no-repeat center; border-left:solid 1px #bdbdbd;}
-.content_product #slider_product .product_vote .vote #vote_neutral.active { background: #fff url('../img/smiley_neutral.png') no-repeat center;}
-.content_product #slider_product .product_vote .vote #vote_good {background: #dddddd url('../img/smiley_good.png') no-repeat center; border-left:solid 1px #bdbdbd;}
-.content_product #slider_product .product_vote .vote #vote_good.active {background: #fff url('../img/smiley_good.png') no-repeat center; border-left:solid 1px #bdbdbd;}
-.content_product #slider_product .product_vote .resultats_vote { display:none; }
-.content_product #slider_product .product_vote .resultats_vote ul{padding: 0; }
-.content_product #slider_product .product_vote .resultats_vote li { float:left; list-style:none; width:33.333333%; height:30px; line-height:30px; text-align:center; background:rgba(255,255,255,0.8); }
-.content_product #slider_product .product_vote .resultats_vote li span { display:block; }
 
-.content_product .infos_lavage ul { text-align:center; margin:15px auto; width:58%; height:33px;}
+/* Vote */
+.content_product .product_vote { overflow:hidden; ; width: 100%; position: absolute; top: 0;}
+.content_product .product_vote .vote { margin-top: 50%; left:0; width:100%; margin-left:100%; }
+.content_product .product_vote .vote .smiley { width:100%; padding:0; }
+.content_product .product_vote .vote .smiley li { display:inline-block; width:33.333333%; height:110px; float:left; list-style:none;  }
+.content_product .product_vote .vote a { display:block; width:100%; height:110px; }
+.content_product .product_vote .vote li.active a {border-bottom:solid 8px #e14a3a; }
+.content_product .product_vote .vote #vote_bad {background: #dddddd url('../img/smiley_bad.png') no-repeat center;}
+.content_product .product_vote .vote #vote_bad.active { background: #fff url('../img/smiley_bad.png') no-repeat center;}
+.content_product .product_vote .vote #vote_neutral {background: #dddddd url('../img/smiley_neutral.png') no-repeat center; border-left:solid 1px #bdbdbd;}
+.content_product .product_vote .vote #vote_neutral.active { background: #fff url('../img/smiley_neutral.png') no-repeat center;}
+.content_product .product_vote .vote #vote_good {background: #dddddd url('../img/smiley_good.png') no-repeat center; border-left:solid 1px #bdbdbd;}
+.content_product .product_vote .vote #vote_good.active {background: #fff url('../img/smiley_good.png') no-repeat center; border-left:solid 1px #bdbdbd;}
+.content_product .product_vote .resultats_vote { display:none; }
+.content_product .product_vote .resultats_vote ul{padding: 0; }
+.content_product .product_vote .resultats_vote li { float:left; list-style:none; width:33.333333%; height:30px; line-height:30px; text-align:center; background:rgba(255,255,255,0.8); }
+.content_product .product_vote .resultats_vote li span { display:block; }
+
+/* Infos Lavage */
+.content_product .infos_lavage { text-align:center; width:100%; }
+.content_product .infos_lavage ul { display:inline-block; margin:15px auto; height:33px;}
 .content_product .infos_lavage li { width:33px; height:33px; float:left; list-style:none; margin-right:5px; }
+.content_product .infos_lavage li a { display:block; width:33px; height:33px; }
 .content_product .infos_lavage li#picto1 { background:url('../img/lavage.png') no-repeat 0 0; }
 .content_product .infos_lavage li#picto2 { background:url('../img/lavage.png') no-repeat -37px 0; }
 .content_product .infos_lavage li#picto3 { background:url('../img/lavage.png') no-repeat -74px 0; }
 .content_product .infos_lavage li#picto4 { background:url('../img/lavage.png') no-repeat -110px 0; }
 .content_product .infos_lavage li#picto5 { background:url('../img/lavage.png') no-repeat -147px 0; margin-right:0; }
 
-.content_product .promotion {  text-align:center; width:65.5%;  margin:30px auto;}
+/* Promotion */
+.content_product .promotion { text-align:center; width:100%; margin: 10px auto;}
+.content_product .promotion .button { display:inline-block; }
 .content_product .promotion .lock { background:url('../img/lock.jpg') 0 -41px; width:40px; height:41px; float:left;  }
 .content_product .promotion .zone_promo { background:url('../img/bg-promo.jpg'); color:#fff; font:bold 18px "Open Sans"; text-transform:uppercase; float:left; height:41px; line-height:41px; padding: 0 20px; }
 
+/* Description */
 .content_product .description { padding: 0 2.5%; height:175px; overflow:hidden; margin:0 0 20px 0; }
 .content_product .description a.description_off { display:block; margin:20px auto; background:url('../img/description_off.jpg') no-repeat; width:153px; height:29px; }
 .content_product .description a.description_on { display:block; margin:20px auto; background:url('../img/description_on.jpg') no-repeat; width:153px; height:29px; }
 .content_product .description h1 { text-align:center; font:bold 16px "Open Sans"; }
 .content_product .description p { font:14px/24px "Open Sans"; text-align:justify; }
 
+/* External Links */
 .content_product .external_links { text-align:center; margin:0 0 20px 0; }
 
+/* Recommandations */
 .content_product .recommandations { padding:0 2.5%; margin:0 0 10px 0; text-align:center; }
 .content_product .recommandations h1 { margin:0 10%; font:18px "Open Sans"; text-transform:uppercase; border-bottom:solid 1px #dbdbdb; background:url('../img/light.png') no-repeat; }
 .content_product .recommandations figure { width:50%; float:left; margin:20px 0 0 0; }
-.content_product .recommandations figure img {border-bottom:1px solid #e74c3c; }
-.content_product .recommandations figure figcaption { text-align:left; text-transform:uppercase; }
+.content_product .recommandations figure img {border-bottom:1px solid #e74c3c; clear: both;}
+.content_product .recommandations figure figcaption { text-align: left; display:inline-block; text-transform:uppercase; clear:both; }
 .content_product .recommandations figure figcaption h2 { font:bold 15px "Open Sans"; margin:0; }
 .content_product .recommandations figure figcaption h3 { font:15px "Open Sans"; margin:0; }
 .content_product .recommandations figure figcaption p.reco_price { font:bold 17px "Open Sans"; color:#e74c3c; margin:0; }

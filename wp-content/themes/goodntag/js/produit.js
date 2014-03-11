@@ -6,7 +6,9 @@ $(function() {
 	var vote_affiche = true;
 
 	// Apparition du vote
-	$('#btn_vote').click(function() {
+	$('#btn_vote').click(function(e) {
+		e.preventDefault();
+
 		if(vote_affiche) {
 			$('.vote').animate({'margin-left':0}, function(){
 				vote_affiche = false;
@@ -21,12 +23,14 @@ $(function() {
 	});
 
 	// Choix de vote
-	$('.smiley li').click(function(){
+	$('.smiley li').click(function(e){
+		e.preventDefault();
+
 		$('.smiley li').removeClass('active');
 		$(this).addClass('active');
 		$('.resultats_vote').fadeIn('slow');
-		$('.resultats_vote li span').css({'font-size': '41px'});
-		$('.resultats_vote li span').animate({'font-size': '14px'}, 600);
+		$('.resultats_vote li span').css({'font-size': '40px', 'opacity':0});
+		$('.resultats_vote li span').animate({'font-size': '14px', 'opacity':1}, 600);
 	});
 
 /*------------------------------------*\
@@ -34,6 +38,7 @@ $(function() {
 \*------------------------------------*/
 	$('#description').click(function(e){
 		e.preventDefault();
+
 		var titleHeight = $('.description h1').height();
 		var pHeight = $('.description p').height();
 

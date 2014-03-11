@@ -47,8 +47,10 @@
 
 	<!-- Promotion -->
 	<article class="promotion clear">
-		<div class="lock"></div>
-		<div class="zone_promo">Code promo</div>
+		<div class="button">
+			<div class="lock"></div>
+			<div class="zone_promo">Code promo</div>
+		</div>
 	</article>
 	<!-- Promotion End -->
 
@@ -71,6 +73,7 @@
 		<h1>Recommandations</h1>
 		<figure>
 			<img src="<?php echo ROOT;?>/img/otaku1.jpg" alt="Otaku - T-shirt Gameboy" title="Otaku - T-shirt Gameboy">
+			<br>
 			<figcaption>
 				<h2>Otaku</h2>
 				<h3>T-Shirt Gameboy</h3>
@@ -80,6 +83,7 @@
 
 		<figure>
 			<img src="<?php echo ROOT;?>/img/otaku1.jpg" alt="Otaku - T-shirt Gameboy" title="Otaku - T-shirt Gameboy">
+			<br>
 			<figcaption>
 				<h2>Otaku</h2>
 				<h3>T-Shirt Gameboy</h3>
@@ -89,6 +93,7 @@
 
 		<figure>
 			<img src="<?php echo ROOT;?>/img/otaku1.jpg" alt="Otaku - T-shirt Gameboy" title="Otaku - T-shirt Gameboy">
+			<br>
 			<figcaption>
 				<h2>Otaku</h2>
 				<h3>T-Shirt Gameboy</h3>
@@ -98,6 +103,7 @@
 
 		<figure>
 			<img src="<?php echo ROOT;?>/img/otaku1.jpg" alt="Otaku - T-shirt Gameboy" title="Otaku - T-shirt Gameboy">
+			<br>
 			<figcaption>
 				<h2>Otaku</h2>
 				<h3>T-Shirt Gameboy</h3>
