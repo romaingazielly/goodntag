@@ -1,6 +1,13 @@
 $(function() {
 
 /*------------------------------------*\
+	Favoris
+\*------------------------------------*/
+	$(".slider_img").doubletap(function(){
+		$('.favoris').css({'display':'block'}).fadeOut(2000);
+	});
+
+/*------------------------------------*\
 	Vote
 \*------------------------------------*/
 	var vote_affiche = true;
@@ -10,12 +17,14 @@ $(function() {
 		e.preventDefault();
 
 		if(vote_affiche) {
+			$('.product_vote').css({'display':'block'});
 			$('.vote').animate({'margin-left':0}, function(){
 				vote_affiche = false;
 			});
 		}
 		else {
 			$('.vote').animate({'margin-left':'100%'}, function(){
+				$('.product_vote').css({'display':'none'});
 				vote_affiche = true;
 			});
 		}

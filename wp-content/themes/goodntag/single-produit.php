@@ -4,8 +4,12 @@
 
 	<!-- Slider -->
 	<article id="slider_product">
-		<div class="slider_img">
-			<p id="product_price">25,00€</p>
+		<?php 
+			$attachment_id = get_field('image');
+			$image = ($attachment_id[0][url]); 
+		?>
+		<div class="slider_img" style="background:url('<?php echo $image?>') no-repeat; background-size:cover;">
+			<p id="product_price"><?php echo get_field("prix", $product->ID); ?> €</p>
 			<a href="#" id="btn_vote"></a>
 		</div>
 		<h1 id="product_name"><?php echo $post->post_title ?></h1>
@@ -28,6 +32,13 @@
 			</article>
 		</section>
 		<!-- Popin Rating End -->
+
+		<!-- Popin Favoris -->
+		<section class="favoris">
+			<img src="<?php echo ROOT?>/img/fav.png">
+		</section>
+		<!-- Popin Favoris End -->
+
 	</article>
 	<!-- Slider End -->
 

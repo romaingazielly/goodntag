@@ -1,3 +1,7 @@
+				</div><!-- /scroller-inner -->
+		        </div><!-- /scroller -->
+			</div><!-- pusher -->
+
 		</div>
 
 
@@ -10,6 +14,11 @@
 		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 		ga('create', 'UA-XXXXXXXX-XX', 'yourdomain.com');
 		ga('send', 'pageview');
+
+		new mlPushMenu( document.getElementById( 'mp-menu' ), document.getElementById( 'trigger' ), {
+				type : 'cover'
+			} );
+
 		</script>
 
 	</body>
