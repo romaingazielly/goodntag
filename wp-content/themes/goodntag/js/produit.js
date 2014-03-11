@@ -43,6 +43,20 @@ $(function() {
 	});
 
 /*------------------------------------*\
+	Promotion
+\*------------------------------------*/
+	var promo = false;
+
+	$('.promotion .button').click(function(){
+		if(promo) {
+			$('.cadenas').removeClass('lock').addClass('unlock');
+		}
+		else{
+			$('.cadenas').removeClass('unlock').addClass('lock');
+		}
+	});
+
+/*------------------------------------*\
 	Description
 \*------------------------------------*/
 	$('#description').click(function(e){

@@ -59,8 +59,9 @@
 	<!-- Promotion -->
 	<article class="promotion clear">
 		<div class="button">
-			<div class="lock"></div>
-			<div class="zone_promo">Code promo</div>
+			<div class="cadenas lock"></div>
+			<div class="zone_promo">promo</div>
+			<div class="montant_promo">15%</div>
 		</div>
 	</article>
 	<!-- Promotion End -->

@@ -48,8 +48,11 @@ img { width:auto; max-width:100%; }
 /* Promotion */
 .content_product .promotion { text-align:center; width:100%; margin: 10px auto;}
 .content_product .promotion .button { display:inline-block; }
-.content_product .promotion .lock { background:url('../img/lock.jpg') 0 -41px; width:40px; height:41px; float:left;  }
-.content_product .promotion .zone_promo { background:url('../img/bg-promo.jpg'); color:#fff; font:bold 18px "Open Sans"; text-transform:uppercase; float:left; height:41px; line-height:41px; padding: 0 20px; }
+.content_product .promotion .cadenas { width:40px; height:41px; float:left;  }
+.content_product .promotion .lock { background:url('../img/lock.jpg') 0 -41px; } 
+.content_product .promotion .unlock { background:url('../img/lock.jpg') 0 0px; } 
+.content_product .promotion .zone_promo { background:url('../img/bg-promo.png'); color:#fff; font:bold 18px "Open Sans"; text-transform:uppercase; float:left; height:41px; line-height:41px; padding: 0 20px; }
+.content_product .promotion .montant_promo { float:left; background:url('../img/bg-promo-montant.png'); height:41px; color:#fff; font:bold 18px "Open Sans"; line-height:41px; padding:0 13px; }
 
 /* Description */
 .content_product .description { padding: 0 2.5%; height:175px; overflow:hidden; margin:0 0 20px 0; }
