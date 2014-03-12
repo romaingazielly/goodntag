@@ -17,12 +17,14 @@ $(function() {
 		e.preventDefault();
 
 		if(vote_affiche) {
+			$('.bg-vote').fadeIn(500);
 			$('.product_vote').css({'display':'block'});
 			$('.vote').animate({'margin-left':0}, function(){
 				vote_affiche = false;
 			});
 		}
 		else {
+			$('.bg-vote').fadeOut(500);
 			$('.vote').animate({'margin-left':'100%'}, function(){
 				$('.product_vote').css({'display':'none'});
 				vote_affiche = true;
@@ -39,7 +41,7 @@ $(function() {
 		$(this).addClass('active');
 		$('.resultats_vote').fadeIn('slow');
 		$('.resultats_vote li span').css({'font-size': '40px', 'opacity':0});
-		$('.resultats_vote li span').animate({'font-size': '14px', 'opacity':1}, 600);
+		$('.resultats_vote li span').animate({'font-size': '17px', 'opacity':1}, 600);
 	});
 
 /*------------------------------------*\
@@ -59,7 +61,7 @@ $(function() {
 /*------------------------------------*\
 	Description
 \*------------------------------------*/
-	$('#description').click(function(e){
+	$('.btn_suite').click(function(e){
 		e.preventDefault();
 
 		var titleHeight = $('.description h1').height();

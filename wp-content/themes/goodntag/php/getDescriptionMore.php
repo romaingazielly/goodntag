@@ -11,8 +11,9 @@ $news = new WP_Query(array('post_type' => "marque", 'post_status' => array('publ
 
 
       $content = get_field("description");
-      $trimmed_content = wp_trim_words( $content, 50, '<a class="readmore" href="'. get_permalink() .'" data-id="'.$id.'"> Lire plus...</a>' );
-      echo $trimmed_content;
+      // $trimmed_content = wp_trim_words( $content, 50, '<a class="readmore" href="'. get_permalink() .'" data-id="'.$id.'"> Lire plus...</a>' );
+      // echo $trimmed_content;
+      echo $content;
     
     $i++;
     endwhile; 

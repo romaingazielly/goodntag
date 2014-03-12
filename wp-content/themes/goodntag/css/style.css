@@ -102,7 +102,7 @@ header{
 	position: absolute;
 	top:0;
 	width: 100%;
-	z-index:999;
+	z-index: 2;
 }
 .logo{
 	text-align: center;
@@ -115,10 +115,10 @@ header{
 	background: url(../img/menu_icon.png) center center no-repeat;
 	height: 45px;
 	left: 0;
-	position: absolute;
+	position: fixed;
 	top:0;
 	width: 50px;
-	z-index: 9999;
+	z-index: 2;
 }
 
 /*------------------------------------*\
@@ -127,9 +127,16 @@ header{
 .brand_slider li{
 	margin-top: -11px;
 }
+.bx-controls {
+	display:none;
+}
 .brand_subtitle{
-	background: url(../img/brand_subtitle.png) repeat-x;
-	height: 40px;
+	background: url(../img/brand_subtitle.png) repeat-x bottom;
+	color: #fff;
+	text-align: center;
+	padding-top: 449px;
+	padding-bottom: 9px;
+	font: 500 18px "Open Sans";
 }
 .brand_subtitle h1{
 	color: white;
@@ -145,12 +152,25 @@ header{
 	margin: 10px auto;
 }
 
+/* Description */
+.description { padding: 0 2.5%; height:auto; margin:0 0 20px 0; text-align:center; }
+.description img { margin:15px 0; }
+.description h1 { margin:0 10%; font:18px "Open Sans"; text-transform:uppercase; border-bottom:solid 1px #dbdbdb; background:url('../img/bg-description.png') no-repeat; text-align:center; }
+.description .text-container { overflow:hidden; height:70px; margin:14px 0; }
+.description p { font:14px/24px "Open Sans"; text-align:justify; margin:0 }
+.description a.btn_suite { display:block; width: 125px; padding: 4px 0px 4px 10px; margin:auto; border:solid 1px #2b2b2b; font:14px "Open Sans"; }
+.description a.btn_suite span.arrow { display:inline-block; width:14px; height:14px; vertical-align: -2px; margin-left: 7px;}
+.description a.description_off span.arrow { background:url('../img/arr.png') no-repeat 0 -14px; }
+.description a.description_on span.arrow { background:url('../img/arr.png') no-repeat 0px 0; }
+
 .separator{
 	background-color: #dbdbdb;
 	height: 1px;
 	margin: 0 auto;
 	width: 30%;
 }
+
+/* Description */
 #btn_descr{
 	border: 1px solid black;
 	color: black;
@@ -167,20 +187,14 @@ header{
 }
 
 .latest_product{
-	height: 100%;
 	margin: 10px 0;
-	padding: 0 10px;
-	overflow: hidden;
+	padding: 0 2.5%;
 	width: 100%;
 }
-.latest_product h1{
-	background: url(../img/plus.png) left center no-repeat;
-	font-size: 16px;
-	margin: 10px auto;
-	padding-left: 20px;
-	text-align: center;
-	text-transform: uppercase;
-}
+.latest_product h1 { margin:0 10%; font:18px "Open Sans"; text-transform:uppercase; border-bottom:solid 1px #dbdbdb; background:url('../img/plus.png') no-repeat center left; text-align:center; }
+.latest_product .bx-wrapper {position:relative;margin: 15px auto 0;}
+.latest_product .bx-controls {display:block; }
+.latest_product .last_product_img { overflow:hidden;}
 .latest_product .bx-wrapper, .latest_product .bx-viewport{
 	min-height: 300px;
 }
@@ -272,7 +286,7 @@ header{
 	top: 50%;
 	width: 200px;
 }
-
+.map { text-align:center; }
 .social{
 	background-color: #f2f2f2;
 	height: 235px;

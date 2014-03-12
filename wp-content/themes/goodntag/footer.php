@@ -16,8 +16,8 @@
 		ga('send', 'pageview');
 
 		new mlPushMenu( document.getElementById( 'mp-menu' ), document.getElementById( 'trigger' ), {
-				type : 'cover'
-			} );
+			type : 'cover'
+		} );
 
 		</script>
 
