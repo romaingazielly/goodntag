@@ -12,6 +12,31 @@ $(function() {
 		}
 	}
 
+	// Menu
+	var smartMenuShowing = false;
+	var pageHeight = $('.contenu').height();
+
+	$('.smart_menu').click(function(e) {
+        e.preventDefault()
+        $('.menu').css({'height':pageHeight});
+
+        if (smartMenuShowing) {
+
+            // Décalage de la page
+            $('.contenu, header').animate({ left: '0px' }, 400, function(){
+                //$('.container').css({'overflow':'hidden'});
+            });
+            smartMenuShowing = false;
+
+        } else {
+
+            // Décalage de la page
+            $('.contenu, header').animate({ left: '260px' }, 400);
+            smartMenuShowing = true;  
+
+        }
+    });
+
 });
 
 

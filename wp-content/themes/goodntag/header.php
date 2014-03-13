@@ -16,6 +16,7 @@ define(ROOT, $root);
         <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="<?php echo ROOT; ?>/css/normalize.min.css" /> 
         <link rel="stylesheet" type="text/css" href="<?php echo ROOT; ?>/css/jquery.bxslider.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo ROOT; ?>/css/common.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo ROOT; ?>/css/marque.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo ROOT; ?>/css/produit.css" />   
 
@@ -46,11 +47,11 @@ define(ROOT, $root);
 
 		<div class="wrapper container">
 			<header class="header " role="banner">
-				<a href="#" class="nav" id="trigger"></a>
+				<a href="#" class="smart_menu"></a>
 				<div class="logo">
-					<a id="link_logo" href="<?php echo home_url(); ?>">LOGO
-						<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-						<!-- <img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img"> -->
+					<a id="link_logo" href="<?php echo home_url(); ?>">
+						<?php echo get_field("logo"); ?>
+						LOGO
 					</a>
 				</div>
 

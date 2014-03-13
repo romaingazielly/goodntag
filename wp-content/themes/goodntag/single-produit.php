@@ -1,23 +1,20 @@
 <?php get_header(); ?>
 
-<?php if (have_posts()): while (have_posts()) : the_post(); ?>
-	<?php $id = get_the_ID();?>
-
+<?php $id = get_the_ID();?>
 <section id="<?php echo $id; ?>"class="contenu page_produit">
+	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 	
 	<!-- Slider -->
 	<article class="slider_product">
-		<?php $diaporama = get_field("image"); 
+    	<?php $diaporama = get_field("image"); 
         if(!empty($diaporama)){ ?>
             <ul class="slider_img">
-
                 <?php foreach ($diaporama as $image){ ?>
                     <li>
-                    	<img src="<?php echo $image["sizes"]["brand_slider"]; ?>" alt="" />
-                    	<p id="product_price"><?php echo get_field("prix"); ?> €</p>
+	                    <img src="<?php echo $image["sizes"]["brand_slider"]; ?>" alt="" />
+						<p id="product_price"><?php echo get_field("prix"); ?> €</p>
                     </li>
                 <?php }   ?>
-
             </ul>
     	<?php } ?>
 		<a href="#" id="btn_vote"></a>
@@ -67,8 +64,8 @@
 	</article>
 	<!-- Infos Lavage End -->
 
+	<!-- Promotion -->
 	<?php
-
 	date_default_timezone_set("UTC"); 
 	$date = new DateTime();
 	
@@ -88,9 +85,6 @@
 			</div>
 		</article>
 	<?php } ?>
-
-	<!-- Promotion -->
-	
 	<!-- Promotion End -->
 
 	<!-- Description -->
@@ -120,8 +114,6 @@
 	<!-- Liens Externes End -->
 
 	<!-- Recommandations -->
-
-
 	<article class="recommandations clear">
 		<h1>Recommandations</h1>
 		<?php
@@ -145,38 +137,9 @@
 			</figcaption>
 		</figure>
 		<?php } ?>
-
-<!-- 		<figure>
-			<img src="<?php echo ROOT;?>/img/otaku1.jpg" alt="Otaku - T-shirt Gameboy" title="Otaku - T-shirt Gameboy">
-			<br>
-			<figcaption>
-				<h2>Otaku</h2>
-				<h3>T-Shirt Gameboy</h3>
-				<p class="reco_price">25,00 €</p>
-			</figcaption>
-		</figure>
-
-		<figure>
-			<img src="<?php echo ROOT;?>/img/otaku1.jpg" alt="Otaku - T-shirt Gameboy" title="Otaku - T-shirt Gameboy">
-			<br>
-			<figcaption>
-				<h2>Otaku</h2>
-				<h3>T-Shirt Gameboy</h3>
-				<p class="reco_price">25,00 €</p>
-			</figcaption>
-		</figure>
-
-		<figure>
-			<img src="<?php echo ROOT;?>/img/otaku1.jpg" alt="Otaku - T-shirt Gameboy" title="Otaku - T-shirt Gameboy">
-			<br>
-			<figcaption>
-				<h2>Otaku</h2>
-				<h3>T-Shirt Gameboy</h3>
-				<p class="reco_price">25,00 €</p>
-			</figcaption>
-		</figure> -->
 	</article>
 	<!-- Recommandations End -->
+
 	<?php endwhile; ?>
 
 	<?php else: ?>
@@ -187,46 +150,14 @@
 
 	</section>
 
-	</main>
-
 	<script>
 		$(document).ready(function(){
-			var id = "<?php echo $id;?>";
 			$('.slider_img').bxSlider({
+				auto: true,
 				controls:false,
-				auto:true
+				touchEnabled: true,
+				pause: 6000
 			});
-			// getDescription(id);
 		});
-
-		// function getDescription(id){
-		// 	$.ajax({
-		//         type: "post",
-		//         url: "<?php echo ROOT; ?>/php/getDescriptionMore.php",
-		//         data: {id:id},
-		//         success: function(data) {
-		//             $(".description p").html(data);   
-		//         }
-		//     });
-		// }
-		// $('#description').on('click', function(e){
-		// 	e.preventDefault();
-		// 	if($(this).hasClass('.description_off')){
-		// 		console.log('clic');
-		// 		var id = $(this).attr('data-id');
-		// 		$.ajax({
-		// 	        type: "post",
-		// 	        url: "<?php echo ROOT; ?>/php/getDescription.php",
-		// 	        data: {'id':id,},
-		// 	        success: function(data) {
-		// 				$(this).find("p").html(data);
-		// 	        }
-		// 	    });
-		// 	}else{
-		// 		console.log('on');
-		// 		var id = $(this).attr('data-id');
-		// 		getDescription(id);
-		// 	}
-		// });
 	</script>
 	<?php get_footer(); ?>
