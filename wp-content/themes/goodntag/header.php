@@ -50,8 +50,14 @@ define(ROOT, $root);
 				<a href="#" class="smart_menu"></a>
 				<div class="logo">
 					<a id="link_logo" href="<?php echo home_url(); ?>">
-						<?php echo get_field("logo"); ?>
-						LOGO
+						<?php if (get_field("logo") ) {
+							$logo = get_field("logo");
+							echo '<img src='.$logo["url"].'>';
+						}
+						else {
+							echo 'LOGO';
+						}
+						?>
 					</a>
 				</div>
 
