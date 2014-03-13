@@ -15,8 +15,8 @@
 ===================================*/
 
 .bx-wrapper {
-	position: absolute;
-	margin: 0;
+	position: relative;
+	margin: 0 auto 60px;
 	padding: 0;
 	*zoom: 1;
 }
@@ -24,25 +24,24 @@
 .bx-wrapper img {
 	max-width: 100%;
 	display: block;
-	margin: auto;
 }
 
 /** THEME
 ===================================*/
 
-/*.bx-wrapper .bx-viewport {
+.bx-wrapper .bx-viewport {
 	-moz-box-shadow: 0 0 5px #ccc;
 	-webkit-box-shadow: 0 0 5px #ccc;
 	box-shadow: 0 0 5px #ccc;
 	border: solid #fff 5px;
 	left: -5px;
 	background: #fff;
-}*/
+}
 
 .bx-wrapper .bx-pager,
 .bx-wrapper .bx-controls-auto {
 	position: absolute;
-	bottom: 10px;
+	bottom: -30px;
 	width: 100%;
 }
 
@@ -50,7 +49,7 @@
 
 .bx-wrapper .bx-loading {
 	min-height: 50px;
-	background: url(../img/bx_loader.gif) center center no-repeat #fff;
+	background: url(images/bx_loader.gif) center center no-repeat #fff;
 	height: 100%;
 	width: 100%;
 	position: absolute;
@@ -67,7 +66,7 @@
 	font-family: Arial;
 	font-weight: bold;
 	color: #666;
-	
+	padding-top: 20px;
 }
 
 .bx-wrapper .bx-pager .bx-pager-item,
@@ -99,12 +98,12 @@
 
 .bx-wrapper .bx-prev {
 	left: 10px;
-	background: url(../img/controls.png) no-repeat 0 -32px;
+	background: url(images/controls.png) no-repeat 0 -32px;
 }
 
 .bx-wrapper .bx-next {
 	right: 10px;
-	background: url(../img/controls.png) no-repeat -43px -32px;
+	background: url(images/controls.png) no-repeat -43px -32px;
 }
 
 .bx-wrapper .bx-prev:hover {
@@ -142,7 +141,7 @@
 	width: 10px;
 	height: 11px;
 	outline: 0;
-	background: url(../img/controls.png) -86px -11px no-repeat;
+	background: url(images/controls.png) -86px -11px no-repeat;
 	margin: 0 3px;
 }
 
@@ -157,7 +156,7 @@
 	width: 9px;
 	height: 11px;
 	outline: 0;
-	background: url(../img/controls.png) -86px -44px no-repeat;
+	background: url(images/controls.png) -86px -44px no-repeat;
 	margin: 0 3px;
 }
 

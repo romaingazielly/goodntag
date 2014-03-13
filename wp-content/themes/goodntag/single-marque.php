@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-	<section>
+	<section class="contenu page_marque">
 	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 	<?php $id = get_the_ID();?>
 		<article id="post-<?php the_ID(); ?>">

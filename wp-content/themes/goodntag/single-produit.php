@@ -1,10 +1,12 @@
 <?php get_header(); ?>
 
-<section class="content_product">
-	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 	<?php $id = get_the_ID();?>
+
+<section id="<?php echo $id; ?>"class="contenu page_produit">
+	
 	<!-- Slider -->
-	<article id="slider_product">
+	<article class="slider_product">
 		<?php $diaporama = get_field("image"); 
         if(!empty($diaporama)){ ?>
             <ul class="slider_img">
