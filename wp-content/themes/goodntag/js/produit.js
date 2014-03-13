@@ -3,8 +3,19 @@ $(function() {
 /*------------------------------------*\
 	Favoris
 \*------------------------------------*/
+	var alsoFav = false;
+
 	$(".slider_img").doubletap(function(){
-		$('.favoris').css({'display':'block'}).fadeOut(2000);
+		if(alsoFav) {
+			$('.fav_img').removeClass('like').addClass('unlike');
+			$('.favoris').css({'display':'block'}).fadeOut(1500);
+			alsoFav = false;
+		}
+		else {
+			$('.fav_img').removeClass('unlike').addClass('like');
+			$('.favoris').css({'display':'block'}).fadeOut(1500);
+			alsoFav = true;
+		}
 	});
 
 /*------------------------------------*\
@@ -64,18 +75,17 @@ $(function() {
 	$('.btn_suite').click(function(e){
 		e.preventDefault();
 
-		var titleHeight = $('.description h1').height();
 		var pHeight = $('.description p').height();
 
 		// Quand la description est courte 
 		if($(this).hasClass('description_off')) {
-			$(this).removeClass().addClass('description_on');
-			$('.description').animate({ 'height':titleHeight+pHeight+69+14});
+			$(this).removeClass('description_off').addClass('description_on');
+			$('.text-container').animate({ 'height':pHeight});
 		}
 		// Quand la description est longue
 		else {
-			$(this).removeClass().addClass('description_off');
-			$('.description').animate({ 'height':'175px'});
+			$(this).removeClass('description_on').addClass('description_off');
+			$('.text-container').animate({ 'height':70});
 		}
 	});
 

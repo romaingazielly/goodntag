@@ -31,7 +31,7 @@
 			</div> -->
 
 			<!-- Description -->
-			<article class="description">
+			<article class="description clear">
 				<img src="<?php echo ROOT;?>/img/logo_sfa.png">
 				<h1>Description</h1>
 				<div class="text-container">
@@ -109,6 +109,7 @@
 		$(document).ready(function(){
 			var id = "<?php echo $id;?>";
 			$('.brand_slider').bxSlider({
+				auto: true,
 				controls:false
 			});
 			// getDescription(id);

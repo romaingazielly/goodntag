@@ -43,7 +43,7 @@
 
 		<!-- Popin Favoris -->
 		<section class="favoris">
-			<img src="<?php echo ROOT?>/img/fav.png">
+			<div class="fav_img like"></div>
 		</section>
 		<!-- Popin Favoris End -->
 
@@ -65,18 +65,34 @@
 	</article>
 	<!-- Infos Lavage End -->
 
+	<?php
+
+	date_default_timezone_set("UTC"); 
+	$date = new DateTime();
+	
+	$promos = get_posts(array('post_type' => "promotion", 'posts_per_page'=>-1,'meta_key' => 'produit', 'meta_value' => get_the_ID() ));
+	foreach ($promos as $promo){
+		$begin = get_field('coupon_begin', $promo->ID);
+		$end = get_field('coupon_end', $promo->ID);
+		$discount = get_field('discount', $promo->ID);
+	}
+
+	if ( (current_time( 'mysql' ) > $begin) && (current_time( 'mysql' ) < $end) ){ ?>
+		<article class="promotion clear">
+			<div class="button">
+				<div class="cadenas lock"></div>
+				<div class="zone_promo"><?php echo $promo->post_title; ?></div>
+				<div class="montant_promo"><?php echo $discount; ?>%</div>
+			</div>
+		</article>
+	<?php } ?>
+
 	<!-- Promotion -->
-	<article class="promotion clear">
-		<div class="button">
-			<div class="cadenas lock"></div>
-			<div class="zone_promo">promo</div>
-			<div class="montant_promo">15%</div>
-		</div>
-	</article>
+	
 	<!-- Promotion End -->
 
 	<!-- Description -->
-	<article class="description">
+	<article class="description clear">
 		<h1>Description</h1>
 		<div class="text-container">
 			<p><?php echo get_field("description"); ?></p>
@@ -175,7 +191,8 @@
 		$(document).ready(function(){
 			var id = "<?php echo $id;?>";
 			$('.slider_img').bxSlider({
-				controls:false
+				controls:false,
+				auto:true
 			});
 			// getDescription(id);
 		});

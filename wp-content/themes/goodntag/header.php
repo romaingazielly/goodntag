@@ -13,7 +13,7 @@ define(ROOT, $root);
         <link href="<?php echo get_template_directory_uri(); ?>/img/icons/favicon.ico" rel="shortcut icon">
         <link href="<?php echo get_template_directory_uri(); ?>/img/icons/touch.png" rel="apple-touch-icon-precomposed">
 
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="<?php echo ROOT; ?>/css/style.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo ROOT; ?>/css/produit.css" />  
         <link rel="stylesheet" type="text/css" href="<?php echo ROOT; ?>/css/normalize.css" />  
@@ -37,12 +37,12 @@ define(ROOT, $root);
             tests: {}
         });
         </script>
+        <script src="<?php echo ROOT; ?>/js/jquery.bxslider.min.js"></script>  
         <script src="<?php echo ROOT; ?>/js/classie.js"></script> 
         <script src="<?php echo ROOT; ?>/js/mlpushmenu.js"></script>
         <script src="<?php echo ROOT; ?>/js/produit.js"></script> 
         <script src="<?php echo ROOT; ?>/js/dtap.js"></script>
-        <script src="<?php echo ROOT; ?>/js/scripts.js"></script> 
-        <script src="<?php echo ROOT; ?>/js/jquery.bxslider.min.js"></script>  
+        <script src="<?php echo ROOT; ?>/js/scripts.js"></script>
 
 	</head>
 	<body>
