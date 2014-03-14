@@ -100,16 +100,16 @@
 	<!-- Liens Externes -->
 	<article class="external_links">
 		<div class="brand_cat">
-				<?php $rubriques = get_field("rubriques");
-				foreach ($rubriques as $rubrique) { ?>
-				<div class="brand_rubrique">
-					<a href="<?php echo $rubrique['lien']; ?>" target="_blank"></a>
-					<img src="<?php echo $rubrique['image']['sizes']['brand_rubrique'];?>" alt="" />
-					<span class="black_rectangle"></span>
-					<p><?php echo $rubrique['titre']; ?></p>
-				</div>
-				<?php } ?>
+			<?php $rubriques = get_field("rubriques");
+			foreach ($rubriques as $rubrique) { ?>
+			<div class="brand_rubrique">
+				<a href="<?php echo $rubrique['lien']; ?>" target="_blank"></a>
+				<img src="<?php echo $rubrique['image']['sizes']['brand_rubrique'];?>" alt="" />
+				<span class="black_rectangle"></span>
+				<p><?php echo $rubrique['titre']; ?></p>
 			</div>
+			<?php } ?>
+		</div>
 	</article>
 	<!-- Liens Externes End -->
 
