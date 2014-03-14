@@ -5,7 +5,7 @@
 /* Brand */
 .brand_slider li{ margin-top: -11px; }
 .brand_slider li img { margin:auto;}
-.brand_subtitle{ background: url('../img/brand_subtitle.png') repeat-x bottom; color: #fff; text-align: center; padding-bottom: 9px; font: 500 18px "Open Sans";}
+.brand_subtitle{ background: url('../img/brand_subtitle.png') repeat-x bottom; color: #fff; text-align: center; padding: 9px 0; font: 500 18px "Open Sans";}
 .brand_subtitle h1{ color: white; font-size: 18px; line-height: 40px; margin: 0; padding: 0; text-align: center; }
 #brand_name{ text-align: center; text-transform: uppercase; margin: 10px auto;}
 
@@ -19,6 +19,7 @@
 .description a.btn_suite span.arrow { display:inline-block; width:14px; height:14px; vertical-align: -2px; margin-left: 7px;}
 .description a.description_off span.arrow { background:url('../img/arrows.png') no-repeat 0 0px; }
 .description a.description_on span.arrow { background:url('../img/arrows.png') no-repeat 0 -14px; }
+.separator{ background-color: #dbdbdb; height: 1px; margin: 0 auto; width: 30%;}
 
 /* Derniers Produits Ajoutés */
 .latest_product{ margin: 10px 0; padding: 0 2.5%; width: 100%;}

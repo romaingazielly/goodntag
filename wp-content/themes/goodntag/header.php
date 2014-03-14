@@ -24,8 +24,6 @@ define(ROOT, $root);
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 		<meta name="description" content="<?php bloginfo('description'); ?>">
 
-			
-
 		<?php wp_head(); ?>
 		<script>
         // conditionizr.com
@@ -35,8 +33,7 @@ define(ROOT, $root);
             tests: {}
         });
         </script>
-        
-        <script src="<?php echo ROOT; ?>/js/jquery-1.11.0.min.js"></script> 
+
         <script src="<?php echo ROOT; ?>/js/jquery.bxslider.min.js"></script>
         <script src="<?php echo ROOT; ?>/js/produit.js"></script> 
         <script src="<?php echo ROOT; ?>/js/dtap.js"></script>

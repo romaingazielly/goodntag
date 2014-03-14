@@ -20,7 +20,7 @@
 
 	<!-- Description -->
 	<article class="description clear">
-		<img src="<?php echo ROOT;?>/img/logo_sfa.png">
+		<?php $logo = get_field("logo"); echo '<img src='.$logo["url"].'>'; ?>
 		<h1>Description</h1>
 		<div class="text-container">
 			<p><?php echo get_field("description"); ?></p>
