@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <?php $id = get_the_ID();?>
-<section id="<?php echo $id; ?>"class="contenu page_produit">
+<section id="<?php echo $id; ?>" data-product-id="<?php echo $id; ?>" class="contenu page_produit">
 	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 	
 	<!-- Slider -->

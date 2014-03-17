@@ -5,13 +5,42 @@ $(function() {
 \*------------------------------------*/
 	var alsoFav = false;
 
+	var registerProductFav = function () {
+		var id = $('section[data-product-id]').attr('data-product-id');
+		console.log('register fav id : '+id)
+		$.ajax({
+			type: 'POST',
+			url: SITE_URL + '/ajax/add_product_fav.php',
+			dataType: 'json',
+			data: {
+				id: id
+			}
+		});
+	};
+
+	var deleteProductFav = function () {
+		var id = $('section[data-product-id]').attr('data-product-id');
+		console.log('delete fav id : '+id)
+		$.ajax({
+			type: 'POST',
+			url: SITE_URL + '/ajax/delete_product_fav.php',
+			dataType: 'json',
+			data: {
+				id: id
+			}
+		});
+	}
+
 	$(".slider_img").doubletap(function(){
 		if(alsoFav) {
+			deleteProductFav();
 			$('.fav_img').removeClass('like').addClass('unlike');
 			$('.favoris').css({'display':'block'}).fadeOut(1500);
 			alsoFav = false;
 		}
 		else {
+			
+			registerProductFav();
 			$('.fav_img').removeClass('unlike').addClass('like');
 			$('.favoris').css({'display':'block'}).fadeOut(1500);
 			alsoFav = true;

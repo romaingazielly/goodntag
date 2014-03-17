@@ -32,6 +32,8 @@ define(ROOT, $root);
             assets: '<?php echo get_template_directory_uri(); ?>',
             tests: {}
         });
+
+        var SITE_URL = "<?php bloginfo('url') ?>";
         </script>
 
         <script src="<?php echo ROOT; ?>/js/jquery.bxslider.min.js"></script>
