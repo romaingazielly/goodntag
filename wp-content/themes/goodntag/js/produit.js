@@ -56,6 +56,36 @@ $(function() {
 	});
 
 /*------------------------------------*\
+	Lavage
+\*------------------------------------*/
+	var blocIsOn = false;
+	$('.liste_pictos li a').click(function(e){
+		e.preventDefault();
+
+		if(blocIsOn) {
+			var picto = $(this).parent().attr('id');
+			$('.bloc_infos li').hide();
+			$('#info-'+picto).fadeIn('slow').css("display","inline-block");
+
+			// Slide de la flèche
+			var arrPosition = $('#'+picto).attr('rev');
+			$('.arr_lavage span').animate({'margin-left':arrPosition+'px'}, 300);
+		}
+		else {
+			var picto = $(this).parent().attr('id');
+			$('.infos_container').fadeIn('slow');
+			$('.bloc_infos li').hide();
+			$('#info-'+picto).fadeIn('slow').css("display","inline-block");
+
+			// Slide de la flèche
+			var arrPosition = $('#'+picto).attr('rev');
+			$('.arr_lavage span').css({'margin-left':arrPosition+'px'});
+
+			blocIsOn = true;
+		}
+	});
+
+/*------------------------------------*\
 	Promotion
 \*------------------------------------*/
 	var promo = false;

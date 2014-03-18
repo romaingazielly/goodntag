@@ -22,10 +22,10 @@
 .product_vote .vote a { display:block; width:100%; height:110px; }
 .product_vote .vote li.active a {border-bottom:solid 8px #e14a3a; }
 .product_vote .vote #vote_bad {background: #dddddd url('../img/smiley_bad.png') no-repeat center; background-size: 50% 50%;}
-.product_vote .vote #vote_bad.active { background: #fff url('../img/smiley_bad.png') no-repeat center; background-size: 50% 50%;}
-.product_vote .vote #vote_neutral {background: #dddddd url('../img/smiley_neutral.png') no-repeat center; background-size: 50% 50%; border-left:solid 1px #bdbdbd;}
+.product_vote .vote #vote_bad.active { background: #fff url('../img/smiley_bad.png') no-repeat center; background-size: 60px 60px;}
+.product_vote .vote #vote_neutral {background: #dddddd url('../img/smiley_neutral.png') no-repeat center; background-size: 60px 60px; border-left:solid 1px #bdbdbd;}
 .product_vote .vote #vote_neutral.active { background: #fff url('../img/smiley_neutral.png') no-repeat center; background-size: 50% 50%;}
-.product_vote .vote #vote_good {background: #dddddd url('../img/smiley_good.png') no-repeat center; background-size: 50% 50%; border-left:solid 1px #bdbdbd;}
+.product_vote .vote #vote_good {background: #dddddd url('../img/smiley_good.png') no-repeat center; background-size: 60px 60px; border-left:solid 1px #bdbdbd;}
 .product_vote .vote #vote_good.active {background: #fff url('../img/smiley_good.png') no-repeat center; background-size: 50% 50%; border-left:solid 1px #bdbdbd;}
 .product_vote .resultats_vote { display:none; }
 .product_vote .resultats_vote ul{padding: 0; ;margin: 0;}
@@ -39,16 +39,22 @@
 .page_produit .favoris .unlike { background:url('../img/unfav.png') no-repeat center; }
 
 /* Infos Lavage */
-.page_produit .infos_lavage { text-align:center; width:100%; margin-top:10px; }
+.page_produit .infos_lavage { text-align:center; width:100%; margin:10px 0 25px 0; }
 .page_produit .infos_lavage h1 { text-align:center; font:300 16px "Open Sans"; color:#2b2b2b; }
-.page_produit .infos_lavage ul { display:inline-block; margin:15px auto; height:33px;}
-.page_produit .infos_lavage li { width:33px; height:33px; float:left; list-style:none; margin-right:5px; }
-.page_produit .infos_lavage li a { display:block; width:33px; height:33px; }
+.page_produit .infos_lavage .liste_pictos { display:inline-block; margin:15px auto 5px; height:33px;}
+.page_produit .infos_lavage .liste_pictos li { width:33px; height:33px; float:left; list-style:none; margin-right:5px; }
+.page_produit .infos_lavage .liste_pictos li a { display:block; width:33px; height:33px; }
 .page_produit .infos_lavage li#picto1 { background:url('../img/lavage.png') no-repeat 0 0; }
 .page_produit .infos_lavage li#picto2 { background:url('../img/lavage.png') no-repeat -37px 0; }
 .page_produit .infos_lavage li#picto3 { background:url('../img/lavage.png') no-repeat -74px 0; }
 .page_produit .infos_lavage li#picto4 { background:url('../img/lavage.png') no-repeat -110px 0; }
 .page_produit .infos_lavage li#picto5 { background:url('../img/lavage.png') no-repeat -147px 0; margin-right:0; }
+.page_produit .infos_lavage .infos_container { display:none; }
+.page_produit .infos_lavage .arr_lavage { width:275px; margin:auto; }
+.page_produit .infos_lavage .arr_lavage span { display:block; width:23px; height:12px; margin-left: 50px; background:url('../img/arr_lavage.png') no-repeat; }
+.page_produit .infos_lavage .bloc_infos { background:#f8f8f8; width:275px; min-height:70px; line-height:70px; margin:auto; padding:0 20px; border:solid 1px #818181; }
+.page_produit .infos_lavage .bloc_infos ul {margin: 0; }
+.page_produit .infos_lavage .bloc_infos li { width:100%; display:none; font:12px "Open Sans"; color:#2b2b2b; list-style:none; line-height: 16px; vertical-align:middle; }
 
 /* Promotion */
 .page_produit .promotion { text-align:center; width:100%; margin: 10px auto 25px;}

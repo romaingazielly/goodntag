@@ -54,13 +54,37 @@
 	<!-- Infos Lavage -->
 	<article class="infos_lavage">
 		<h1>M / BLANC / 100% COTON</h1>
-		<ul>
-			<li id="picto1"><a href="#"></a></li>
-			<li id="picto2"><a href="#"></a></li>
-			<li id="picto3"><a href="#"></a></li>
-			<li id="picto4"><a href="#"></a></li>
-			<li id="picto5"><a href="#"></a></li>
+		<ul class="liste_pictos">
+			<li id="picto1" rev="50"><a href="#"></a></li>
+			<li id="picto2" rev="87"><a href="#"></a></li>
+			<li id="picto3" rev="127"><a href="#"></a></li>
+			<li id="picto4" rev="164"><a href="#"></a></li>
+			<li id="picto5" rev="202"><a href="#"></a></li>
 		</ul>
+		<div class="infos_container">
+			<div class="arr_lavage">
+				<span></span>
+			</div>
+			<section class="bloc_infos">
+				<ul>
+					<li id="info-picto1">
+						Lavage normal avec une température maximale de 30°C au programme spécial avec action mécanique très réduite.
+					</li>
+					<li id="info-picto2">
+						Ne pas utiliser d'agent blanchissant
+					</li>
+					<li id="info-picto3">
+						Ne convient pas au séchage en machine
+					</li>
+					<li id="info-picto4">
+						Convient au séchage en machine, maximum 55°
+					</li>
+					<li id="info-picto5">
+						Repasser à la main, à sec, ou à la vapeur. Maximum 150°
+					</li>
+				</ul>
+			</section>
+		</div>
 	</article>
 	<!-- Infos Lavage End -->
 
