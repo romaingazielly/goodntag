@@ -6,29 +6,29 @@
 /* Slider */
 .page_marque .brand_slider li{ margin-top: -11px; }
 .page_marque .brand_slider li img { margin:auto;}
-.page_marque .brand_subtitle{ background: url('../img/brand_subtitle.png') repeat-x bottom; color: #fff; text-align: center; padding: 9px 0; font: 500 18px "Open Sans";}
+.page_marque .brand_subtitle{ background: url('../img/brand_subtitle.png') repeat-x bottom; color: #fff; text-align: center; font: 500 18px "Open Sans"; height: 40px; line-height: 40px;}
 .page_marque .brand_subtitle h1{ color: white; font-size: 18px; line-height: 40px; margin: 0; padding: 0; text-align: center; }
 .page_marque #brand_name{ text-align: center; text-transform: uppercase; margin: 10px auto;}
 
 /* Logo */
 .page_marque .logo_marque .logo-container { position: relative; }
-.page_marque .logo_marque .logo-container img { position:absolute; left:50%; z-index:3; }
+.page_marque .logo_marque .logo-container img { position:absolute; left:50%; z-index:3; -webkit-transform: translate3d(0,0,0); }
 
-/* Description */
-.page_marque .description { padding: 0 2.5%; height:auto; margin:0 0 20px 0; text-align:center; }
-.page_marque .description img { margin:15px 0; }
-.page_marque .description h1 { margin:0 10%; font:18px "Open Sans"; text-transform:uppercase; border-bottom:solid 1px #dbdbdb; background:url('../img/bg-description.png') no-repeat; text-align:center; }
-.page_marque .description .text-container { overflow:hidden; height:70px; margin:14px 0; }
-.page_marque .description p { font:14px/24px "Open Sans"; text-align:justify; margin:0 }
-.page_marque .description a.btn_suite { display:block; width: 125px; padding: 4px 0px 4px 10px; margin:auto; border:solid 1px #2b2b2b; font:14px "Open Sans"; float: right;}
-.page_marque .description a.btn_suite span.arrow { display:inline-block; width:14px; height:14px; vertical-align: -2px; margin-left: 7px;}
-.page_marque .description a.description_off span.arrow { background:url('../img/arrows.png') no-repeat 0 0px; }
-.page_marque .description a.description_on span.arrow { background:url('../img/arrows.png') no-repeat 0 -14px; }
-.page_marque .separator{ background-color: #dbdbdb; height: 1px; margin: 0 auto; width: 30%;}
+/* Description ! */
+.description { padding: 0 2.5%; height:auto; margin:0 0 20px 0; text-align:center; }
+.description img { margin:15px 0; }
+.description h1 { margin:0 10%; font:18px "Open Sans"; text-transform:uppercase; border-bottom:solid 1px #dbdbdb; background: url('../img/bg-description2.png') no-repeat; text-align:center; background-size: 21px 21px;}
+.description .text-container { overflow:hidden; height:70px; margin:14px 0; }
+.description p { font:14px/24px "Open Sans"; text-align:justify; margin:0 }
+.description a.btn_suite { display:block; width: 125px; padding: 4px 0px 4px 10px; margin:auto; border:solid 1px #2b2b2b; font:14px "Open Sans"; float: right;}
+.description a.btn_suite span.arrow { display:inline-block; width:14px; height:14px; vertical-align: -2px; margin-left: 7px;}
+.description a.description_off span.arrow { background:url('../img/arrow-right.png') no-repeat 0 0px; background-size:50% auto; }
+.description a.description_on span.arrow { background: url('../img/arrow-bot.png') no-repeat 0px center; background-size: 100% auto; }
+.separator{ background-color: #dbdbdb; height: 1px; margin: 0 auto; width: 30%;}
 
 /* Derniers Produits Ajoutés */
 .page_marque .latest_product{ margin: 10px 0; padding: 0 2.5%; width: 100%;}
-.page_marque .latest_product h1 { margin: 0; font:18px "Open Sans"; text-transform:uppercase; border-bottom:solid 1px #dbdbdb; background:url('../img/plus.png') no-repeat center left; text-align:center;}
+.page_marque .latest_product h1 { margin: 0; font:18px "Open Sans"; text-transform:uppercase; border-bottom:solid 1px #dbdbdb; background:url('../img/plus.png') no-repeat center left; background-size: 18px 18px; text-align:center;}
 .page_marque .latest_product .bx-wrapper {position:relative;margin: 15px auto 0;}
 .page_marque .latest_product .bx-controls {display:block; }
 .page_marque .latest_product .last_product_img { overflow:hidden;}
@@ -52,11 +52,11 @@
 .page_marque .brand_rubrique .black_rectangle{ background-color: #000; height: 50px; left: 50%; position:absolute; margin-left: -100px; margin-top: -25px; opacity: 0.6; top: 50%; width: 200px; }
 .page_marque .brand_rubrique p{ color: #fff; font:bold 16px "Open Sans"; line-height: 50px; text-transform: uppercase; text-align: center; z-index: 1; height: 50px; left: 50%; position:absolute; margin-left: -100px; margin-top: -25px; top: 50%; width: 200px;}
 
-/* Liens Externes */
+/* Liens Externes ! */
 .external_link { margin:0 2% 20px; }
 .external_link li { width:100%; height:125px; margin:0 0 8px 0; list-style:none; }
 .external_link li a { display:block; text-align:center; padding:40px 0 }
-.external_link li a span { display:block; background:rgba(0,0,0,0.65); color:#fff; font:20px "Open Sans"; text-transform:uppercase; height:40px; line-height:40px; width:345px; margin:auto; }
+.external_link li a span { display:block; background:rgba(0,0,0,0.65); color:#fff; font:20px "Open Sans"; text-transform:uppercase; height:40px; line-height:40px; width: 80%; margin:auto; }
 
 /* Points de Vente */
 .page_marque .pts_vente { text-align:center; }

@@ -98,18 +98,14 @@
 	<!-- Description End -->
 
 	<!-- Liens Externes -->
-	<article class="external_links">
-		<div class="brand_cat">
+	<article class="external_link">
+		<ul>
 			<?php $rubriques = get_field("rubriques");
 			foreach ($rubriques as $rubrique) { ?>
-			<div class="brand_rubrique">
-				<a href="<?php echo $rubrique['lien']; ?>" target="_blank"></a>
-				<img src="<?php echo $rubrique['image']['sizes']['brand_rubrique'];?>" alt="" />
-				<span class="black_rectangle"></span>
-				<p><?php echo $rubrique['titre']; ?></p>
-			</div>
-			<?php } ?>
-		</div>
+			<li style="background:url('<?php echo $rubrique['image']['sizes']['brand_rubrique'];?> ') no-repeat; background-size:cover;">
+				<a href="#"><span><?php echo $rubrique['titre']; ?></span></a>
+			</li>
+		<?php }	?>
 	</article>
 	<!-- Liens Externes End -->
 
@@ -156,6 +152,7 @@
 				auto: true,
 				controls:false,
 				touchEnabled: true,
+				swipeThreshold: 100,
 				pause: 6000
 			});
 		});
