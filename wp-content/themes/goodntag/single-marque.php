@@ -22,7 +22,7 @@
     <article class="logo_marque">
     <?php $logo = get_field("logo"); ?>
 		<div class="logo-container" style="height:<?php echo $logo['sizes']['small-height']; ?>px; max-height:<?php echo $logo['sizes']['small-height']; ?>px;">
-			<?php echo '<img id="logo-big" height="100%" src="' . $logo["url"] . '" style="margin-left:' . ($logo["sizes"]["small-width"])/-2 . 'px;">;'; ?>
+			<?php echo '<img id="logo-big" height="100%" src="' . $logo["url"] . '" style="margin-left:' . ($logo["sizes"]["small-width"])/-2 . 'px;">'; ?>
 		</div>
 	</article>
 	<!-- Logo End -->
@@ -109,6 +109,7 @@
 			auto: true,
 			controls:false,
 			touchEnabled: true,
+			swipeThreshold: 100,
 			pause: 6000
 		});
 		$('.product_slider').bxSlider({

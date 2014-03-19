@@ -2,11 +2,11 @@
 img { width:auto; max-width:100%; }
 
 /* Header */
-header{ position:fixed; top:0; background:rgba(255,255,255,0.9); border-bottom: 1px solid #bababa; height: 45px; width: 100%; z-index: 2;}
+header{ position:fixed; top:0; background:rgba(255,255,255,0.9); border-bottom: 1px solid #bababa; height: 45px; width: 100%; z-index: 3;}
 header .logo{ position: relative; text-align: center;}
 header .logo #link_logo{ font-size: 26px; line-height: 45px;}
 header .logo #link_logo img{ vertical-align: top; max-height: 44px; }
-header .smart_menu{ background: url('../img/menu_icon.png') center center no-repeat; height: 45px; left: 0; position: absolute; top:0; width: 50px; z-index: 2;}
+header .smart_menu{ background: url('../img/menu_icon.png') center center no-repeat; background-size: 50% 50%; height: 45px; left: 0; position: absolute; top:0; width: 50px; z-index: 2;}
 .contenu { position: relative; padding-top:45px; }
 
 /* Bx Config */
