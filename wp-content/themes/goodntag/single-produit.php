@@ -25,9 +25,9 @@
 			<div class="bg-vote"></div>
 			<article class="vote">
 				<ul class="smiley clear">
-					<li class="active" id="vote_bad"><a href="#" title="Bad"></a></li>
-					<li id="vote_neutral"><a href="#" title="Neutre"></a></li>
-					<li id="vote_good"><a href="#" title="Good"></a></li>
+					<li class="active" id="vote_bad" data-vote="bad"><a href="#" title="Bad"></a></li>
+					<li id="vote_neutral" data-vote="neutral" ><a href="#" title="Neutre"></a></li>
+					<li id="vote_good" data-vote="good" ><a href="#" title="Good"></a></li>
 				</ul>
 				<aside class="resultats_vote clear">
 					<ul class="clear">

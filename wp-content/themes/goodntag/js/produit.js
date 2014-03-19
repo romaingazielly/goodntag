@@ -31,6 +31,20 @@ $(function() {
 		});
 	}
 
+	var registerVote = function (vote) {
+		var id = $('section[data-product-id]').attr('data-product-id');
+		console.log('vote '+vote+' for : '+id)
+		$.ajax({
+			type: 'POST',
+			url: SITE_URL + '/ajax/vote.php',
+			dataType: 'json',
+			data: {
+				id: id,
+				vote: vote
+			}
+		});
+	}
+
 	$(".slider_img").doubletap(function(){
 		if(alsoFav) {
 			deleteProductFav();
@@ -77,11 +91,15 @@ $(function() {
 	$('.smiley li').click(function(e){
 		e.preventDefault();
 
+		var vote = $(this).attr('data-vote');
+
 		$('.smiley li').removeClass('active');
 		$(this).addClass('active');
 		$('.resultats_vote').fadeIn('slow');
 		$('.resultats_vote li span').css({'font-size': '40px', 'opacity':0});
 		$('.resultats_vote li span').animate({'font-size': '17px', 'opacity':1}, 600);
+
+		registerVote(vote);
 	});
 
 /*------------------------------------*\
