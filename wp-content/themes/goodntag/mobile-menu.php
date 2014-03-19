@@ -4,7 +4,7 @@
 			<img src="<?php echo ROOT; ?>/img/account_img.jpg">
 		</li>
 		<li class="profil"><a href="#">Mon profil</a></li>
-		<li class="favoris"><a href="#">Mes favoris</a></li>
+		<li class="favoris"><a href="<?php bloginfo('url') ?>/favoris">Mes favoris</a></li>
 		<li class="historique"><a href="#">Historique</a></li>
 		<li class="badges"><a href="#">Mes badges</a></li>
 	</ul>
