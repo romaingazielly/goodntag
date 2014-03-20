@@ -6,7 +6,7 @@ $(function() {
 	var alsoFav = false;
 
 	var registerProductFav = function () {
-		var id = $('section[data-product-id]').attr('data-product-id');
+		var id = $('[data-product-id]').attr('data-product-id');
 		$.ajax({
 			type: 'POST',
 			url: SITE_URL + '/ajax/add_product_fav.php',
@@ -18,7 +18,7 @@ $(function() {
 	};
 
 	var deleteProductFav = function () {
-		var id = $('section[data-product-id]').attr('data-product-id');
+		var id = $('[data-product-id]').attr('data-product-id');
 		$.ajax({
 			type: 'POST',
 			url: SITE_URL + '/ajax/delete_product_fav.php',
@@ -56,6 +56,17 @@ $(function() {
 			$('.favoris').css({'display':'block'}).fadeOut(1500);
 			alsoFav = true;
 		}
+	});
+
+	$('.remove-fav').click(function(e){
+		e.preventDefault();
+
+		var fav = $(this).parents('li').attr('id', 'del');
+		$('#del').animate({'margin-left':'-100%'}, 400, function(){
+			$(this).remove();
+			location.reload();
+		});
+		deleteProductFav();
 	});
 
 /*------------------------------------*\

@@ -7,18 +7,19 @@
 		$userId = get_current_user_id();
 		$favString = get_user_meta($userId, 'product_fav', true);
 
-		$favs = explode(',', $favString);
+		if ('' == $favString) :
 	?>
-
-	<!-- fav loop -->
-	<?php foreach($favs as $fav) : $product = get_post($fav); ?>
+		<p class="no-fav">Vous n'avez pas de favoris</p>
+	<?php else: $favs = explode(',', $favString); ?>
 
 		<article class="fav-product">
 			<ul>
-				<li>
+			<!-- fav loop -->
+				<?php foreach($favs as $fav) : $product = get_post($fav); ?>
+				<li data-product-id="<?php echo $product->ID; ?>">
 					<figure class="clear">
 						<?php
-							$diaporama = get_field("image", $product->ID); 
+							$diaporama = get_field("image", $product->ID);
 							$image = array_pop($diaporama);
 						?>
 						<img src="<?php echo $image["sizes"]["brand_slider"]; ?>" alt="" />
@@ -32,10 +33,11 @@
 						</figcaption>
 					</figure>
 				</li>
+				<?php endforeach; ?>
 			</ul>
 		</article>
-		
-	<?php endforeach; ?>
+
+	<?php endif; ?>
 </section>
 
 <?php get_footer(); ?>
