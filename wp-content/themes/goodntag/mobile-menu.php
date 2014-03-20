@@ -1,8 +1,7 @@
 <nav class="menu">
 	<ul>
 		<li class="infos_compte">
-			<!-- <img src="<?php echo ROOT; ?>/img/account_img.jpg"> -->
-			<?php wp_login_form(array()); ?> 
+			<?php wp_login_form(array()); ?>
 		</li>
 		<li class="profil"><a href="#">Mon profil</a></li>
 		<li class="favoris"><a href="<?php bloginfo('url') ?>/favoris">Mes favoris</a></li>
