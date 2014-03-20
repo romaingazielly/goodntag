@@ -1,6 +1,38 @@
 <?php get_header(); ?>
 
-<?php $id = get_the_ID();?>
+<?php
+
+	// get product infos
+
+	$id = get_the_ID();
+	$userId = get_current_user_id();
+
+	// vote of current user
+	$voteUser = get_user_meta($userId, 'product_votes', true);
+
+	if (in_array($id, explode(',', $voteUser))) { // there's a vote
+		$vote = get_user_meta($userId, 'product_vote_'.$id, true);
+	} else {
+		$vote = '';
+	}
+
+
+	// get vote percents
+	$votesBad = get_post_meta($id, 'votes_bad', true) ?: 0;
+	$votesNeutral = get_post_meta($id, 'votes_neutral', true) ?: 0;
+	$votesGood = get_post_meta($id, 'votes_good', true) ?: 0;
+
+	$votesTotal = $votesGood + $votesNeutral + $votesBad;
+
+	if ($votesTotal > 0) {
+		$percentBad = (int) $votesBad / $votesTotal * 100;
+		$percentNeutral = (int) $votesNeutral / $votesTotal * 100;
+		$percentGood = (int) $votesGood / $votesTotal * 100;
+	} else {
+		$percentBad = $percentGood = $percentNeutral = 0;
+	}
+
+?>
 <section id="<?php echo $id; ?>" data-product-id="<?php echo $id; ?>" class="contenu page_produit">
 	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 	
@@ -21,19 +53,19 @@
 		<h1 id="product_name"><?php echo $post->post_title ?></h1>
 
 		<!-- Popin Rating -->
-		<section class="product_vote">
+		<section class="product_vote <?php if ($vote == '') : ?> can-vote <?php else: ?>cannot-vote<?php endif; ?>">
 			<div class="bg-vote"></div>
 			<article class="vote">
 				<ul class="smiley clear">
-					<li class="active" id="vote_bad" data-vote="bad"><a href="#" title="Bad"></a></li>
-					<li id="vote_neutral" data-vote="neutral" ><a href="#" title="Neutre"></a></li>
-					<li id="vote_good" data-vote="good" ><a href="#" title="Good"></a></li>
+					<li <?php if('bad' == $vote) : ?>class="active"<?php endif; ?> id="vote_bad" data-vote="bad"><a href="#" title="Bad"></a></li>
+					<li <?php if('neutral' == $vote) : ?>class="active"<?php endif; ?>id="vote_neutral" data-vote="neutral" ><a href="#" title="Neutre"></a></li>
+					<li <?php if('good' == $vote) : ?>class="active"<?php endif; ?>id="vote_good" data-vote="good" ><a href="#" title="Good"></a></li>
 				</ul>
 				<aside class="resultats_vote clear">
 					<ul class="clear">
-						<li id="vote_bad_results"><span>0%</span></li>
-						<li id="vote_neutral_results"><span>0%</span></li>
-						<li id="vote_good_results"><span>100%</span></li>
+						<li id="vote_bad_results"><span><?php echo (int) $percentBad; ?>%</span></li>
+						<li id="vote_neutral_results"><span><?php echo (int) $percentNeutral; ?>%</span></li>
+						<li id="vote_good_results"><span><?php echo (int) $percentGood; ?>%</span></li>
 					</ul>
 				</aside>
 			</article>
