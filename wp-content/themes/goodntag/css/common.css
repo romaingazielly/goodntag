@@ -22,3 +22,18 @@ header .smart_menu{ background: url('../img/menu_icon.png') center center no-rep
 .menu ul li a { display:block; padding:0 0 0 15px; color:#4c4c4c; }
 .menu ul li a:hover, .menu ul li a.active { background:#d6d6d6 url('../img/arr_menu.png') no-repeat 235px center; }
 .menu ul li.infos_compte { height:auto; background:#fff; border:none; box-shadow: inset -8px 0px 14px -10px #9b9b9b; }
+
+/* Favoris */
+.favoris h1 { background:#f8f8f8; box-shadow: 0px 1px 15px -4px #656565; }
+.favoris h1 span { display:block; font:700 22px "Open Sans"; width:150px; padding:10px 0 10px 50px; margin:auto; background:url('../img/fav.png') no-repeat left center; background-size:37px 37px; color:#393434; text-transform:uppercase; }
+.favoris .fav-product ul { margin:0; }
+.favoris .fav-product li {width:100%; border-bottom:solid 1px #d6d6d6; list-style:none;}
+.favoris figure { width: 98%; margin:auto; }
+.favoris figure:before { display:inline; }
+.favoris figure img { display:inline-block; margin: 0 2% 0 0; width:31.25%; vertical-align:middle;}
+.favoris figcaption { display:inline-block; vertical-align:middle; width: 64.75%; text-align: right; padding: 10px 0;}
+.favoris figcaption .fav-infos {float: left; text-align: left;}
+.favoris figcaption h2 { text-transform:uppercase; color:#2b2b2b; margin:0; font:700 16px "Open Sans"; }
+.favoris figcaption h3 { margin:0; font:13px "Open Sans"; }
+.favoris figcaption h4 { margin:0; color:#e74c3c; font:700 19px "Open Sans"; }
+.remove-fav { display:inline-block; width:40px; height:42px; margin: 12px 0; background:url('../img/btn-remove-fav.png') no-repeat; background-size:40px 42px; }

@@ -21,12 +21,12 @@
 .product_vote .vote .smiley li { display:inline-block; width:33.333333%; height:110px; float:left; list-style:none;  }
 .product_vote .vote a { display:block; width:100%; height:110px; }
 .product_vote .vote li.active a {border-bottom:solid 8px #e14a3a; }
-.product_vote .vote #vote_bad {background: #dddddd url('../img/smiley_bad.png') no-repeat center; background-size: 50% 50%;}
+.product_vote .vote #vote_bad {background: #dddddd url('../img/smiley_bad.png') no-repeat center; background-size: 60px 60px;}
 .product_vote .vote #vote_bad.active { background: #fff url('../img/smiley_bad.png') no-repeat center; background-size: 60px 60px;}
 .product_vote .vote #vote_neutral {background: #dddddd url('../img/smiley_neutral.png') no-repeat center; background-size: 60px 60px; border-left:solid 1px #bdbdbd;}
-.product_vote .vote #vote_neutral.active { background: #fff url('../img/smiley_neutral.png') no-repeat center; background-size: 50% 50%;}
+.product_vote .vote #vote_neutral.active { background: #fff url('../img/smiley_neutral.png') no-repeat center; background-size: 60px 60px;}
 .product_vote .vote #vote_good {background: #dddddd url('../img/smiley_good.png') no-repeat center; background-size: 60px 60px; border-left:solid 1px #bdbdbd;}
-.product_vote .vote #vote_good.active {background: #fff url('../img/smiley_good.png') no-repeat center; background-size: 50% 50%; border-left:solid 1px #bdbdbd;}
+.product_vote .vote #vote_good.active {background: #fff url('../img/smiley_good.png') no-repeat center; background-size: 60px 60px; border-left:solid 1px #bdbdbd;}
 .product_vote .resultats_vote { display:none; }
 .product_vote .resultats_vote ul{padding: 0; ;margin: 0;}
 .product_vote .resultats_vote li { float:left; list-style:none; width:33.333333%; height: 33px; line-height: 33px; text-align:center; background: #bfbfbf; box-shadow: inset 0px 4px 2px -3px #656565; }

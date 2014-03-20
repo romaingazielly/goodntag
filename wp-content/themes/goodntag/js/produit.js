@@ -7,7 +7,6 @@ $(function() {
 
 	var registerProductFav = function () {
 		var id = $('section[data-product-id]').attr('data-product-id');
-		console.log('register fav id : '+id)
 		$.ajax({
 			type: 'POST',
 			url: SITE_URL + '/ajax/add_product_fav.php',
@@ -20,7 +19,6 @@ $(function() {
 
 	var deleteProductFav = function () {
 		var id = $('section[data-product-id]').attr('data-product-id');
-		console.log('delete fav id : '+id)
 		$.ajax({
 			type: 'POST',
 			url: SITE_URL + '/ajax/delete_product_fav.php',
@@ -33,7 +31,6 @@ $(function() {
 
 	var registerVote = function (vote) {
 		var id = $('section[data-product-id]').attr('data-product-id');
-		console.log('vote '+vote+' for : '+id)
 		$.ajax({
 			type: 'POST',
 			url: SITE_URL + '/ajax/vote.php',

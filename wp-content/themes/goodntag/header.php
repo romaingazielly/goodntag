@@ -55,7 +55,7 @@ define(ROOT, $root);
 							echo '<img src='.$logo["url"].'>';
 						}
 						else {
-							echo 'LOGO';
+							
 						}
 						?>
 					</a>

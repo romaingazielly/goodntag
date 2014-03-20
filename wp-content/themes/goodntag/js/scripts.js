@@ -16,6 +16,8 @@ $(function() {
 	var smartMenuShowing = false;
 	var pageHeight = $('.contenu').height();
 
+	if(pageHeight < 1280) pageHeight = 1280;
+
 	$('.smart_menu').click(function(e) {
         e.preventDefault()
         $('.menu').css({'height':pageHeight});
@@ -37,6 +39,24 @@ $(function() {
         }
     });
 
+	// Favoris
+	var deleteProductFav = function () {
+		var id = $('section[data-product-id]').attr('data-product-id');
+		console.log('delete fav id : '+id)
+		$.ajax({
+			type: 'POST',
+			url: SITE_URL + '/ajax/delete_product_fav.php',
+			dataType: 'json',
+			data: {
+				id: id
+			}
+		});
+	}
+
+	$('.remove-fav').click(function(){
+		console.log('ok');
+		deleteProductFav();
+	});
 });
 
 
