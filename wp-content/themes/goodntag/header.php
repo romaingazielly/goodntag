@@ -50,6 +50,8 @@ define(ROOT, $root);
 
 		  ga('create', 'UA-49219337-1', 'goodntag.com');
 		  ga('send', 'pageview');
+
+		  
 		</script>
 	</head>
 	<body>
