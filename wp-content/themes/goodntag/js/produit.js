@@ -43,6 +43,7 @@ $(function() {
 
 	var registerVote = function (vote) {
 		var id = $('section[data-product-id]').attr('data-product-id');
+		console.log('vote for product : '+id, vote);
 		$.ajax({
 			type: 'POST',
 			url: SITE_URL + '/ajax/vote.php',
