@@ -29,6 +29,18 @@ $(function() {
 		});
 	}
 
+	var deleteProductFavMany = function (id) {
+		
+		$.ajax({
+			type: 'POST',
+			url: SITE_URL + '/ajax/delete_product_fav.php',
+			dataType: 'json',
+			data: {
+				id: id
+			}
+		});
+	}
+
 	var registerVote = function (vote) {
 		var id = $('section[data-product-id]').attr('data-product-id');
 		$.ajax({
@@ -62,11 +74,12 @@ $(function() {
 		e.preventDefault();
 
 		var fav = $(this).parents('li').attr('id', 'del');
+		var id = $(this).parents('li').attr('data-product-id');
 		$('#del').animate({'margin-left':'-100%'}, 400, function(){
 			$(this).remove();
 			location.reload();
 		});
-		deleteProductFav();
+		deleteProductFavMany(id);
 	});
 
 /*------------------------------------*\

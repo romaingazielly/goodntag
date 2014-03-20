@@ -36,4 +36,5 @@ header .smart_menu{ background: url('../img/menu_icon.png') center center no-rep
 .favoris figcaption h2 { text-transform:uppercase; color:#2b2b2b; margin:0; font:700 16px "Open Sans"; }
 .favoris figcaption h3 { margin:0; font:13px "Open Sans"; }
 .favoris figcaption h4 { margin:0; color:#e74c3c; font:700 19px "Open Sans"; }
-.remove-fav { display:inline-block; width:40px; height:42px; margin: 12px 0; background:url('../img/btn-remove-fav.png') no-repeat; background-size:40px 42px; }
+.favoris .remove-fav { display:inline-block; width:40px; height:42px; margin: 12px 0; background:url('../img/btn-remove-fav.png') no-repeat; background-size:40px 42px; }
+.favoris .no-fav { font:16px "Open Sans"; color:#2b2b2b; padding:20px; text-align:center; }
