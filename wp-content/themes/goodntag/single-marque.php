@@ -100,7 +100,27 @@
 		<div class="map">
 			<?php echo generate_map_all($lats, $lons, $addresses, $names); ?>
 
-			<script type="text/javascript">getLocation();</script>
+			<script type="text/javascript">
+
+			var getLocation = function () {
+				navigator.geolocation.getCurrentPosition(function (position) {
+					var lat = position.coords.latitude;
+					var lon = position.coords.longitude;
+					console.log(lat, lon);
+					var myLatlng = new google.maps.LatLng(lat, lon);
+					var marker = new google.maps.Marker({
+					      position: myLatlng,
+					      map: mapmap,
+					      title: 'Ma position'
+					  });
+
+					mapmap.setCenter(myLatlng);
+				});
+			};
+
+			getLocation();
+
+			</script>
 		</div>
 	</article>
 	<!-- Points de vente End -->

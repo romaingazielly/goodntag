@@ -51,16 +51,7 @@ define(ROOT, $root);
 		  ga('create', 'UA-49219337-1', 'goodntag.com');
 		  ga('send', 'pageview');
 
-		  var getLocation = function () {
-			navigator.geolocation.getCurrentPosition(function (position) {
-				var lat = position.coords.latitude;
-				var lon = position.coords.longitude;
-				console.log(lat, lon);
-				mapmap.setCenter(new google.maps.LatLng(lat, lon));
-				addMarker(new google.maps.LatLng(lat,lon),"Ma position","Ma position","http://maps.gstatic.com/mapfiles/markers2/marker.png",mapmap);
-				addLoadEvent(initializemap);
-			})
-		};
+		  
 		</script>
 	</head>
 	<body>
