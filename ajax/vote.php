@@ -11,6 +11,15 @@ if (isset($_POST['id']) && isset($_POST['vote'])) {
 
 	$userId = get_current_user_id();
 
+	// deja voté pour ce produit ?
+	if (get_user_meta('product_vote_'.$id) != null) {
+		echo json_encode(array(
+			'code' => 1
+		));
+
+		return;
+	}
+
 	$voteUser = get_user_meta($userId, 'product_votes', true);
 
 	if (null == $voteUser) {
@@ -24,7 +33,7 @@ if (isset($_POST['id']) && isset($_POST['vote'])) {
 
 
 	// Update du produit
-	
+
 	$voteCounter = (int) get_post_meta($id, 'votes_'.$vote, true);
 
 	if (!$voteCounter) {

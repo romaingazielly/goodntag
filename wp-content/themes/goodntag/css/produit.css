@@ -14,6 +14,7 @@
 .page_produit .slider_product #btn_vote {position: absolute;top: 0;right: 0;display: block;height:65px; width:65px; background: url('../img/vote.png') no-repeat bottom; ;margin-top: 377px;z-index: 2;}
 
 /* Vote */
+.product_vote.cannot-vote a { cursor: default; }
 .product_vote { display:none; overflow:hidden; ; width: 100%; height: 442px; position: absolute; top: 0;}
 .product_vote .bg-vote { position: absolute; display:none; width:100%; height: 100%; background:rgba(0,0,0,0.71); ; z-index: 1;}
 .product_vote .vote { position: relative; margin: 160px 0 0 0; left:0; width:100%; height: 155px; margin-left:100%; z-index: 2;}

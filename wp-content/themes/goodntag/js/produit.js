@@ -110,8 +110,11 @@ $(function() {
 	});
 
 	// Choix de vote
-	$('.smiley li').click(function(e){
+	$('.can-vote .smiley li').click(function(e){
 		e.preventDefault();
+
+		var el = $('.can-vote');
+		el.removeClass('can-vote').addClass('cannot-vote');
 
 		var vote = $(this).attr('data-vote');
 
