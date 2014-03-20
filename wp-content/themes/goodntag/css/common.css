@@ -22,6 +22,12 @@ header .smart_menu{ background: url('../img/menu_icon.png') center center no-rep
 .menu ul li a { display:block; padding:0 0 0 15px; color:#4c4c4c; }
 .menu ul li a:hover, .menu ul li a.active { background:#d6d6d6 url('../img/arr_menu.png') no-repeat 235px center; }
 .menu ul li.infos_compte { height:auto; background:#fff; border:none; box-shadow: inset -8px 0px 14px -10px #9b9b9b; }
+.menu #loginform { padding:10px 0 0 0; }
+.menu #loginform > p { margin:0 20px 0px; padding:0 0 0 10px; font:14px "Open Sans"; color:#4c4c4c; }
+.menu #loginform > p label { display:block; margin:0 0 5px 0; }
+.menu #loginform > p input { padding:0 10px; font:14px "Open Sans"; }
+.menu #loginform .login-remember { font-size:10px; vertical-align:bottom; text-transform:none; }
+.menu #loginform #wp-submit { padding:5px 10px; font:14px "Open Sans"; border:none; margin:0 0 10px 0;}
 
 /* Favoris */
 .favoris h1 { background:#f8f8f8; box-shadow: 0px 1px 15px -4px #656565; }
