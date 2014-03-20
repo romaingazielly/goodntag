@@ -35,7 +35,7 @@ $(function(){
 		else{
 			// 	$('#logo-big').css({
 			// 	'margin-left': widthLogoCurrent/-2,
-			// 	'height': newSize,
+			// 	'height': heightLogoCurrent + reducer,
 			// 	'min-height': heightLogoMini // Résultat final, quand  scroll = 393px
 			// });
 		}
