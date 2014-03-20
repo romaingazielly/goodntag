@@ -1,6 +1,25 @@
 <?php get_header(); ?>
 
 <?php $id = get_the_ID();?>
+
+<?php 
+	
+	// geolocation
+	$stores = get_posts('post_type=store');
+	$lats = $lons = $addresses = $names = array();
+
+	foreach ($stores as $k => $store) {
+		if ($id == get_post_meta($store->ID, 'brand', true)[0]) {
+			$coordinates = getCoordinatesFromAddress(get_post_meta($store->ID, 'address', true));
+			$lats[] = $coordinates['lat'];
+			$lons[] = $coordinates['lng'];
+			$addresses[] = get_post_meta($store->ID, 'address', true);
+			$names[] = $store->post_title;
+		}
+	}
+	
+
+?>
 <section class="contenu page_marque" id="post-<?php the_ID(); ?>">
 	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 	
@@ -79,7 +98,9 @@
 	<article class="pts_vente">
 		<h1><span>Point(s) de vente</span></h1>
 		<div class="map">
-			
+			<?php echo generate_map_all($lats, $lons, $addresses, $names); ?>
+
+			<script type="text/javascript">getLocation();</script>
 		</div>
 	</article>
 	<!-- Points de vente End -->

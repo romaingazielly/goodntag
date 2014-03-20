@@ -5,6 +5,8 @@
  *  Custom functions, support, custom post types and more.
  */
 
+require 'api/geolocation.php';
+
 /*------------------------------------*\
 	External Modules/Files
 \*------------------------------------*/
