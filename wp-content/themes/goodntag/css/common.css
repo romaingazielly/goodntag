@@ -44,3 +44,7 @@ header .smart_menu{ background: url('../img/menu_icon.png') center center no-rep
 .favoris figcaption h4 { margin:0; color:#e74c3c; font:700 19px "Open Sans"; }
 .favoris .remove-fav { display:inline-block; width:40px; height:42px; margin: 12px 0; background:url('../img/btn-remove-fav.png') no-repeat; background-size:40px 42px; }
 .favoris .no-fav { font:16px "Open Sans"; color:#2b2b2b; padding:20px; text-align:center; }
+
+/* Historique */
+.favoris h1 { background:#f8f8f8; box-shadow: 0px 1px 15px -4px #656565; }
+.favoris h1 span { display:block; font:700 22px "Open Sans"; width:150px; padding:10px 0 10px 50px; margin:auto; background:url('../img/fav.png') no-repeat left center; background-size:37px 37px; color:#393434; text-transform:uppercase; }
