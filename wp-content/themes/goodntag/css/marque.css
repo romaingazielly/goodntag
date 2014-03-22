@@ -15,7 +15,7 @@
 .page_marque .logo_marque .logo-container img { position:absolute; left:50%; z-index:3; -webkit-transform: translate3d(0,0,0); }
 
 /* Description ! */
-.description { padding: 0 2.5%; height:auto; margin:0 0 20px 0; text-align:center; }
+.description { padding: 0 2.5%; height:auto; margin:10px 0 20px 0; text-align:center; }
 .description img { margin:15px 0; }
 .description h1 { margin:0 10%; font:18px "Open Sans"; text-transform:uppercase; border-bottom:solid 1px #dbdbdb; background: url('../img/bg-description2.png') no-repeat; text-align:center; background-size: 21px 21px;}
 .description .text-container { overflow:hidden; height:70px; margin:14px 0; }
