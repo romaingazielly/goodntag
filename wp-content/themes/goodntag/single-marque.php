@@ -9,9 +9,9 @@
 	$lats = $lons = $addresses = $names = array();
 
 	foreach ($stores as $k => $store) {
-
-		if ($id == get_post_meta($store->ID, 'brand', true)) {
-			$id = $id[0];
+		$brand = get_post_meta($store->ID, 'brand', true);
+		
+		if ($id == $brand[0]) {
 
 			$coordinates = getCoordinatesFromAddress(get_post_meta($store->ID, 'address', true));
 			$lats[] = $coordinates['lat'];
