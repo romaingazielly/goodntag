@@ -9,8 +9,10 @@
 	$lats = $lons = $addresses = $names = array();
 
 	foreach ($stores as $k => $store) {
+
 		if ($id == get_post_meta($store->ID, 'brand', true)) {
 			$id = $id[0];
+
 			$coordinates = getCoordinatesFromAddress(get_post_meta($store->ID, 'address', true));
 			$lats[] = $coordinates['lat'];
 			$lons[] = $coordinates['lng'];
@@ -67,16 +69,18 @@
   			$image = get_field("image", $product->ID);
   			$prix = get_field("prix", $product->ID);?>
   			<div>
-      			<div class="last_product">
-      				<div class="last_product_img">
-      					<img src="<?php echo $image[0]['sizes']['brand_product']; ?>" alt="" />
-      				</div>
-      				<div class="last_product_infos">
-      					<p id="product_brand"><?php echo the_title(); ?></p>
-      					<p id="product_name"><?php echo $product->post_title; ?></p>
-      					<p id="product_price"><?php echo $prix; ?> €</p>
-      				</div>
-      			</div>
+  				<a href="<?php echo $product->guid?>">
+	      			<div class="last_product">
+	      				<div class="last_product_img">
+	      					<img src="<?php echo $image[0]['sizes']['brand_product']; ?>" alt="" />
+	      				</div>
+	      				<div class="last_product_infos">
+	      					<p id="product_brand"><?php echo the_title(); ?></p>
+	      					<p id="product_name"><?php echo $product->post_title; ?></p>
+	      					<p id="product_price"><?php echo $prix; ?> €</p>
+	      				</div>
+	      			</div>
+      			</a>
   			</div>
   		<?php }	?>
   		</div>

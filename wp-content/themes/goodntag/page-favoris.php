@@ -21,12 +21,14 @@
 						<?php
 							$diaporama = get_field("image", $product->ID);
 							$image = array_pop($diaporama);
+							$productUrl = site_url('/produit/'.$product->post_name);
+							$marqueUrl = site_url('/marque/'.get_post(get_post_meta($product->ID, 'brand', true))->post_title);
 						?>
-						<img src="<?php echo $image["sizes"]["brand_slider"]; ?>" alt="" />
+						<a href="<?php echo $productUrl ?>"><img src="<?php echo $image["sizes"]["brand_slider"]; ?>" alt="" /></a>
 						<figcaption>
 							<section class="fav-infos">
-								<h2><?php echo get_post(get_post_meta($product->ID, 'brand', true))->post_title; ?></h2>
-								<h3><?php echo $product->post_title; ?></h3>
+								<h2><a href="<?php echo $marqueUrl ?>"><?php echo get_post(get_post_meta($product->ID, 'brand', true))->post_title; ?></a></h2>
+								<h3><a href="<?php echo $productUrl ?>"><?php echo $product->post_title; ?></a></h3>
 								<h4><?php echo get_field('prix', $product->ID); ?> €</h4>
 							</section>
 							<a href="#" class="remove-fav"></a>

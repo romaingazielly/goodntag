@@ -3,7 +3,6 @@
 <?php
 
 	// get product infos
-
 	$id = get_the_ID();
 	$userId = get_current_user_id();
 
@@ -180,13 +179,15 @@
   			?>
 
 		<figure>
-			<img src="<?php echo $image[0]['sizes']['brand_product']; ?>" alt="<?php echo $product->post_title; ?>" title="<?php echo $product->post_title; ?>">
-			<br>
-			<figcaption>
-				<h2><?php echo $marque->post_title; ?></h2>
-				<h3><?php echo $product->post_title; ?></h3>
-				<p class="reco_price"><?php echo $prix; ?> €</p>
-			</figcaption>
+			<a href="<?php echo $product->guid; ?>">
+				<img src="<?php echo $image[0]['sizes']['brand_product']; ?>" alt="<?php echo $product->post_title; ?>" title="<?php echo $product->post_title; ?>">
+				<br>
+				<figcaption>
+					<h2><?php echo $marque->post_title; ?></h2>
+					<h3><?php echo $product->post_title; ?></h3>
+					<p class="reco_price"><?php echo $prix; ?> €</p>
+				</figcaption>
+			</a>
 		</figure>
 		<?php } ?>
 	</article>
