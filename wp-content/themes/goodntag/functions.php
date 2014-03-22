@@ -6,6 +6,7 @@
  */
 
 require 'api/geolocation.php';
+require 'api/registration.php';
 
 /*------------------------------------*\
 	External Modules/Files
