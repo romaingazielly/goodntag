@@ -55,7 +55,7 @@ function get_coords($address)
 	$place_lat = $geo[2];
 	$place_lon = $geo[3];
 
-	return array($place_lat, $place_lon);
+	return array('lat' => $place_lat, 'lng' => $place_lon);
 }
 
 function getCoordinatesFromAddress($address) {

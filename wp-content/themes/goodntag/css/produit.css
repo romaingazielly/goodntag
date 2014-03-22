@@ -6,8 +6,9 @@
 /* Slider */
 .page_produit .slider_product{position: relative;min-height: 442px;}
 .page_produit .slider_product h1 { color:#2b2b2b; text-align:center; font:20px 'Open Sans'; text-transform:uppercase; padding: 10px 0 9px 0; z-index: 22;}
-.page_produit .slider_product .slider_img {position:relative; height:442px;margin-top: 0;}
-.page_produit .slider_product .slider_img img {min-height:442px; margin:auto;}
+.page_produit .slider_product .slider_img {position:relative; height:442px; margin-top: 0;}
+.page_produit .slider_product .slider_img li { min-height:442px; }
+.page_produit .slider_product .slider_img img { margin:auto; max-height: 100%;}
 .page_produit .slider_product .bx-wrapper .bx-pager{ bottom: 50px;}
 .page_produit .slider_product .slider_img #product_price {height:30px; position:absolute; width:100%; bottom:0; line-height:30px; margin:0; background:rgba(0,0,0,0.3); color:#fff; text-transform:uppercase; text-align:center; font:bold 22px "Open Sans"; }
 .page_produit .slider_product .bx-controls { display:none; }

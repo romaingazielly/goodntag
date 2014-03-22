@@ -41,8 +41,7 @@
         if(!empty($diaporama)){ ?>
             <ul class="slider_img">
                 <?php foreach ($diaporama as $image){ ?>
-                    <li>
-	                    <img src="<?php echo $image["sizes"]["brand_slider"]; ?>" alt="" />
+                    <li style="background:url('<?php echo $image["sizes"]["large"]; ?>') no-repeat center; background-size:cover;">
 						<p id="product_price"><?php echo get_field("prix"); ?> €</p>
                     </li>
                 <?php }   ?>
@@ -180,7 +179,7 @@
 
 		<figure>
 			<a href="<?php echo $product->guid; ?>">
-				<img src="<?php echo $image[0]['sizes']['brand_product']; ?>" alt="<?php echo $product->post_title; ?>" title="<?php echo $product->post_title; ?>">
+				<img src="<?php echo $image[0]['sizes']['large']; ?>" alt="<?php echo $product->post_title; ?>" title="<?php echo $product->post_title; ?>">
 				<br>
 				<figcaption>
 					<h2><?php echo $marque->post_title; ?></h2>
@@ -205,13 +204,17 @@
 
 	<script>
 		$(document).ready(function(){
-			$('.slider_img').bxSlider({
-				auto: true,
-				controls:false,
-				touchEnabled: true,
-				swipeThreshold: 100,
-				pause: 6000
-			});
+
+			if($('.slider_img li').length > 1){
+				$('.slider_img').bxSlider({
+					auto: true,
+					controls:false,
+					touchEnabled: true,
+					swipeThreshold: 100,
+					pause: 6000
+				});
+			}
+			
 		});
 	</script>
 	<?php get_footer(); ?>

@@ -72,7 +72,7 @@
   				<a href="<?php echo $product->guid?>">
 	      			<div class="last_product">
 	      				<div class="last_product_img">
-	      					<img src="<?php echo $image[0]['sizes']['brand_product']; ?>" alt="" />
+	      					<img src="<?php echo $image[0]['sizes']['large']; ?>" alt="" />
 	      				</div>
 	      				<div class="last_product_infos">
 	      					<p id="product_brand"><?php echo the_title(); ?></p>
