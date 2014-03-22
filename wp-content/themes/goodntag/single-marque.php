@@ -9,7 +9,8 @@
 	$lats = $lons = $addresses = $names = array();
 
 	foreach ($stores as $k => $store) {
-		if ($id == get_post_meta($store->ID, 'brand', true)[0]) {
+		if ($id == get_post_meta($store->ID, 'brand', true)) {
+			$id = $id[0];
 			$coordinates = getCoordinatesFromAddress(get_post_meta($store->ID, 'address', true));
 			$lats[] = $coordinates['lat'];
 			$lons[] = $coordinates['lng'];
@@ -114,7 +115,7 @@
 					      title: 'Ma position'
 					  });
 
-					mapmap.setCenter(myLatlng);
+					// mapmap.setCenter(myLatlng)
 				});
 			};
 
