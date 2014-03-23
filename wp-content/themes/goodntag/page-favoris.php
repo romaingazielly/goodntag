@@ -24,7 +24,7 @@
 							$productUrl = site_url('/produit/'.$product->post_name);
 							$marqueUrl = site_url('/marque/'.get_post(get_post_meta($product->ID, 'brand', true))->post_title);
 						?>
-						<a href="<?php echo $productUrl ?>"><img src="<?php echo $image["sizes"]["brand_slider"]; ?>" alt="" /></a>
+						<a href="<?php echo $productUrl ?>"><img src="<?php echo $image["sizes"]["large"]; ?>" alt="" /></a>
 						<figcaption>
 							<section class="fav-infos">
 								<h2><a href="<?php echo $marqueUrl ?>"><?php echo get_post(get_post_meta($product->ID, 'brand', true))->post_title; ?></a></h2>

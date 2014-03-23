@@ -40,7 +40,6 @@
 
 /* Slider Derniers Produits */
 .page_marque .product_slider{ margin-top: 20px; }
-.page_marque .product_slider > div:nth-child(even) { margin:0 10px; }
 .page_marque .latest_product .bx-wrapper .bx-pager{ height: 10px; top: 0; }
 .page_marque .latest_product .bx-wrapper .bx-pager.bx-default-pager a:hover, .latest_product .bx-wrapper .bx-pager.bx-default-pager a{background: url('../img/btn_puce.jpg') no-repeat; border-radius: 0; height: 10px; width: 10px; }
 .page_marque .latest_product .bx-wrapper .bx-pager.bx-default-pager a:hover, .latest_product .bx-wrapper .bx-pager.bx-default-pager a.active{background: url('../img/btn_puce_active.jpg') no-repeat; border-radius: 0; height: 10px; width: 10px; }

@@ -42,11 +42,11 @@
             <ul class="slider_img">
                 <?php foreach ($diaporama as $image){ ?>
                     <li style="background:url('<?php echo $image["sizes"]["large"]; ?>') no-repeat center; background-size:cover;">
-						<p id="product_price"><?php echo get_field("prix"); ?> €</p>
                     </li>
                 <?php }   ?>
             </ul>
     	<?php } ?>
+    	<p id="product_price"><?php echo get_field("prix"); ?> €</p>
 		<a href="#" id="btn_vote"></a>
 		<h1 id="product_name"><?php echo $post->post_title ?></h1>
 

@@ -32,7 +32,7 @@
         if(!empty($diaporama)){ ?>
             <ul class="brand_slider">
                 <?php foreach ($diaporama as $image){ ?>
-                    <li><img src="<?php echo $image["sizes"]["brand_slider"]; ?>" alt="" /></li>
+                    <li><img src="<?php echo $image["sizes"]["large"]; ?>" alt="" /></li>
                 <?php }   ?>
             </ul>
     	<?php } ?>
@@ -64,7 +64,9 @@
 		<h1>Derniers produits ajoutés</h1>
 		<div class="product_slider">
 		<?php
-		$products = get_posts(array('post_type' => "produit", 'posts_per_page'=>6,'meta_key' => 'marque','order' => 'DESC', 'meta_value' => get_the_ID() ));
+		//$products = get_posts(array('post_type' => "produit", 'posts_per_page'=>6,'meta_key' => 'marque','order' => 'DESC', 'meta_value' => get_the_ID() ));
+		$products = get_posts(array('post_type' => "produit", 'posts_per_page'=>6,'orderby' => 'DESC', 'meta_value' => get_the_ID() ));
+
 		foreach ($products as $product){
   			$image = get_field("image", $product->ID);
   			$prix = get_field("prix", $product->ID);?>
@@ -92,7 +94,7 @@
 		<ul>
 		<?php $rubriques = get_field("rubrique");
 		foreach ($rubriques as $rubrique) { ?>
-		<li style="background:url('<?php echo $rubrique['image']['sizes']['brand_rubrique'];?> ') no-repeat; background-size:cover;">
+		<li style="background:url('<?php echo $rubrique['image']['sizes']['large'];?> ') no-repeat; background-size:cover;">
 			<a href="#"><span><?php echo $rubrique['title']; ?></span></a>
 		</li>
 		<?php }	?>
@@ -163,6 +165,7 @@
 		    slideWidth: 150,
 		    minSlides: 2,
 		    maxSlides: 2,
+		    slideMargin: 10,
 		    controls:false,
 		    swipeThreshold: 100,
 		    touchEnabled: true
