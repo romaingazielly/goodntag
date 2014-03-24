@@ -22,10 +22,22 @@ function registration_errors_handler($errors, $sanitized_user_login = null, $use
 
 function user_register_handler($id) {
 	wp_set_password($_POST['user_pass'], $id);
+	$redirection = $_POST['redirection'];
 
-	wp_redirect(get_bloginfo('url').'/register?result=success');
+	wp_redirect(get_bloginfo('url').'/register?result=success'.'&redirection='.$redirection);
 	exit;
 }
+
+function site_router() {
+	$root =  str_replace('index.php', '', $_SERVER['SCRIPT_NAME']);
+	$url = str_replace($root, '', $_SERVER["REQUEST_URI"]);
+	$url = explode('/', $url);
+	if(count($url) == 1 && $url[0] == 'login'){
+		require('../page-login.php');
+	}
+}
+
+add_action('send_headers', 'site_router');
 
 add_action('registration_errors', 'registration_errors_handler');
 

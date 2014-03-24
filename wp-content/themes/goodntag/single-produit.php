@@ -71,7 +71,7 @@
 		<!-- Popin Rating End -->
 
 		<!-- Popin Favoris -->
-		<section class="favoris">
+		<section class="favoris" <?php if(is_user_logged_in()) : ?>data-log="true" <?php else : ?>data-log="false"<?php endif; ?>>
 			<div class="fav_img like"></div>
 		</section>
 		<!-- Popin Favoris End -->
@@ -83,7 +83,7 @@
 
 	<!-- Infos Lavage -->
 	<article class="infos_lavage">
-		<h1>M / BLANC / 100% COTON</h1>
+		<h1>S, M, L, XL / BLANC / 100% COTON</h1>
 		<ul class="liste_pictos">
 			<li id="picto1" rev="50"><a href="#"></a></li>
 			<li id="picto2" rev="87"><a href="#"></a></li>

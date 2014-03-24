@@ -4,6 +4,8 @@ $(function() {
 	Favoris
 \*------------------------------------*/
 	var alsoFav = false;
+	var connected = $('.favoris').attr('data-log');
+	console.log(connected);
 
 	var registerProductFav = function () {
 		var id = $('[data-product-id]').attr('data-product-id');
@@ -56,18 +58,23 @@ $(function() {
 	}
 
 	$(".slider_img").doubletap(function(){
-		if(alsoFav) {
-			deleteProductFav();
-			$('.fav_img').removeClass('like').addClass('unlike');
-			$('.favoris').css({'display':'block'}).fadeOut(1500);
-			alsoFav = false;
+		console.log(connected);
+		if(connected == true) {
+			if(alsoFav) {
+				deleteProductFav();
+				$('.fav_img').removeClass('like').addClass('unlike');
+				$('.favoris').css({'display':'block'}).fadeOut(1500);
+				alsoFav = false;
+			}
+			else {
+				registerProductFav();
+				$('.fav_img').removeClass('unlike').addClass('like');
+				$('.favoris').css({'display':'block'}).fadeOut(1500);
+				alsoFav = true;
+			}
 		}
 		else {
-			
-			registerProductFav();
-			$('.fav_img').removeClass('unlike').addClass('like');
-			$('.favoris').css({'display':'block'}).fadeOut(1500);
-			alsoFav = true;
+			alert("Vous devez vous connecter pour ajouter un produit aux favoris.");
 		}
 	});
 
