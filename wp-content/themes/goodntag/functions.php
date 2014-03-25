@@ -482,6 +482,7 @@ function brandRubrique( $sizes ) {
         'brand_rubrique' => __('Marque rubrique'),
     ) );
 }
+
 add_filter( 'register_url', 'custom_register_url' );
 function custom_register_url( $register_url )
 {
@@ -506,4 +507,13 @@ function auto_login( $user ) {
         do_action( 'wp_login', $user_login );
     }     
 }
+
+function delete_bad_fields()
+{
+    global $wpdb;
+    $wpdb->query( "DELETE FROM $wpdb->usermeta WHERE user_id NOT IN ( SELECT concat( ID ) from $wpdb->users )" );
+}
+add_action( 'admin_init', 'delete_bad_fields' );
+
+
 ?>

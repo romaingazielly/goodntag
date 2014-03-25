@@ -3,9 +3,8 @@ $(function() {
 /*------------------------------------*\
 	Favoris
 \*------------------------------------*/
-	var alsoFav = false;
+	var alsoFav = $('.favoris').attr('data-fav');
 	var connected = $('.favoris').attr('data-log');
-	console.log(connected);
 
 	var registerProductFav = function () {
 		var id = $('[data-product-id]').attr('data-product-id');
@@ -58,19 +57,21 @@ $(function() {
 	}
 
 	$(".slider_img").doubletap(function(){
-		console.log(connected);
-		if(connected == true) {
-			if(alsoFav) {
+
+		console.log(alsoFav);
+
+		if(connected == 'true') {
+			if(alsoFav == 'true') {
 				deleteProductFav();
 				$('.fav_img').removeClass('like').addClass('unlike');
 				$('.favoris').css({'display':'block'}).fadeOut(1500);
-				alsoFav = false;
+				alsoFav = 'false';
 			}
 			else {
 				registerProductFav();
 				$('.fav_img').removeClass('unlike').addClass('like');
 				$('.favoris').css({'display':'block'}).fadeOut(1500);
-				alsoFav = true;
+				alsoFav = 'true';
 			}
 		}
 		else {

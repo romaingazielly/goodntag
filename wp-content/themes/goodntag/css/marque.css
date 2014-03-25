@@ -12,7 +12,7 @@
 
 /* Logo */
 .page_marque .logo_marque .logo-container { position: relative; }
-.page_marque .logo_marque .logo-container img { position:absolute; left:50%; z-index:3; -webkit-transform: translate3d(0,0,0); }
+.page_marque .logo_marque .logo-container img { position:absolute; left:50%; -webkit-transform: translate3d(0,0,0); }
 
 /* Description ! */
 .description { padding: 0 2.5%; height:auto; margin:10px 0 20px 0; text-align:center; }

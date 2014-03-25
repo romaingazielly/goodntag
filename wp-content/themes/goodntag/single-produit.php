@@ -31,6 +31,15 @@
 		$percentBad = $percentGood = $percentNeutral = 0;
 	}
 
+	// Le produit est il déjà aux favoris ?
+	$favString = get_user_meta($userId, 'product_fav', true);
+
+	if($favString != '') {
+		$favs = explode(',', $favString); 
+		$isFav = in_array($id, $favs);
+	} 
+		
+
 ?>
 <section id="<?php echo $id; ?>" data-product-id="<?php echo $id; ?>" class="contenu page_produit">
 	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
@@ -71,7 +80,7 @@
 		<!-- Popin Rating End -->
 
 		<!-- Popin Favoris -->
-		<section class="favoris" <?php if(is_user_logged_in()) : ?>data-log="true" <?php else : ?>data-log="false"<?php endif; ?>>
+		<section class="favoris" <?php if(is_user_logged_in()) : ?>data-log="true" <?php else : ?>data-log="false"<?php endif; ?> <?php if($isFav) : ?>data-fav="true" <?php else : ?>date-fav="false" <?php endif; ?> >
 			<div class="fav_img like"></div>
 		</section>
 		<!-- Popin Favoris End -->

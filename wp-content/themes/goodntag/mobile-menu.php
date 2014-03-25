@@ -28,13 +28,9 @@
 					
 				?>
 			</div>
-<!-- 			<div class="flap">
-				<?php 
-					wp_login_form(array());
-					do_action( 'wordpress_social_login' );
-				?>
-			</div> -->
+
 		</li>
+		<li><a href="<?php echo $_SERVER['HTTP_REFERER']; ?>">Précèdent</a></li>
 		<li><a href="<?php bloginfo('url') ?>/mon-profil">Mon profil</a></li>
 		<li><a href="<?php bloginfo('url') ?>/favoris">Mes favoris</a></li>
 		<li><a href="<?php bloginfo('url') ?>/historique">Historique</a></li>

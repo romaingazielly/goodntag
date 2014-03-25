@@ -7,7 +7,7 @@
 			<ul>
 				<li data-product-id="">
 					<figure class="clear">
-						<a href="#"><img src="http://goodntag.romain.dev/wp-content/uploads/2014/02/sfa_product1.jpg" alt="" /></a>
+						<a href="#"><img src="http://goodntag.com/wp-content/uploads/2014/03/SFA-x-GTA.png" alt="" /></a>
 						<figcaption>
 							<section class="fav-infos">
 								<h2><a href="#"></a>So Far Away</h2>
