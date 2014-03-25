@@ -35,13 +35,6 @@ define(ROOT, $root);
 
         var SITE_URL = "<?php bloginfo('url') ?>";
         </script>
-
-        <script src="<?php echo ROOT; ?>/js/jquery.bxslider.min.js"></script>
-        <script src="<?php echo ROOT; ?>/js/marque.js"></script>
-        <script src="<?php echo ROOT; ?>/js/produit.js"></script> 
-        <script src="<?php echo ROOT; ?>/js/dtap.js"></script>
-        <script src="<?php echo ROOT; ?>/js/scripts.js"></script>
-
         <script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -53,6 +46,7 @@ define(ROOT, $root);
 
 		  
 		</script>
+
 	</head>
 	<body>
 

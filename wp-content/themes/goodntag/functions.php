@@ -482,4 +482,28 @@ function brandRubrique( $sizes ) {
         'brand_rubrique' => __('Marque rubrique'),
     ) );
 }
+add_filter( 'register_url', 'custom_register_url' );
+function custom_register_url( $register_url )
+{
+    $register_url = get_permalink( '76' );
+    return $register_url;
+}
+add_filter( 'registration_redirect', 'wpse_129618_registration_redirect' );
+function wpse_129618_registration_redirect( $redirect ) {
+    if( isset( $_SERVER['HTTP_REFERER'] ) && 0 != strlen( $_SERVER['HTTP_REFERER'] ) ) {
+        $redirect = esc_url( $_SERVER['HTTP_REFERER'] );
+    }
+    return $redirect;
+}
+
+function auto_login( $user ) {
+    $username = $user;
+    if ( !is_user_logged_in() ) {
+        $user = get_userdatabylogin( $username );
+        $user_id = $user->ID;
+        wp_set_current_user( $user_id, $user_login );
+        wp_set_auth_cookie( $user_id );
+        do_action( 'wp_login', $user_login );
+    }     
+}
 ?>

@@ -1,0 +1,637 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+.clear{
+    clear: both;
+}
+.full{
+    height: 100%;
+    position: relative;
+    min-height: 768px;
+    width: 100%;
+}
+.screen{
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+    overflow: hidden;
+    z-index: 1;
+}
+.parallax{
+    top: 0px;
+    position: absolute; 
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+    
+}
+
+.wrapper{
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    width: 960px;
+}
+/* ==========================================================================
+   Home
+   ========================================================================== */
+.home{
+    background: url('../img/site/home.jpg') center center no-repeat;
+    background-attachment: fixed; 
+    background-size: cover;
+}
+
+/* ==========================================================================
+   Mobile
+   ========================================================================== */
+.mobile{
+    background: #545454;
+    background-attachment: fixed; 
+}
+.mobile .bold{
+    color: #e34b3b;
+    font-family:"Helvetica LT Std";
+    font-size: 70px;
+    font-weight: 700;
+    margin-top: -160px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 50%;
+    border-left: 30px solid #e34b3b;
+    padding-left: 10px;
+    padding-top: 10px;
+    line-height: 55px;
+}
+.mobile p{
+    color: white;
+    font: 30px "Helvetica LT Std";
+    font-weight: bold;
+    position: absolute;
+    text-transform: uppercase;
+    text-align: center;
+    top: 50%;
+}
+.mobile .mobile_img{
+    background: url('../img/site/mobile.png') bottom right no-repeat;
+    height: 100%;
+    width: 100%;
+}
+
+/* ==========================================================================
+   Dad
+   ========================================================================== */
+.dad{
+    background: url('../img/site/dad.jpg') center center no-repeat;
+    background-attachment: fixed; 
+    background-size: cover;
+}
+.dad .border{
+    background-color: #e34b3b;
+    height: 36px;
+    margin-top: -18px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+.dad .icon{
+    color: white;
+    height: 275px;
+    top: 50%;
+    position: absolute;
+    text-align: center;
+    width: 280px;
+}
+.dad .icon1{
+    background: url('../img/site/icon1.png') center center no-repeat;
+    height: 106px;
+    left: 0;
+}
+.dad .icon1.margin{
+    margin-top: -148px;
+}
+.dad .title{
+    background-color: #e34b3b;
+    border: 1px solid #4b4b4b;
+    border-bottom: 4px solid #4b4b4b;
+    height: 36px;
+    line-height: 36px;
+    text-transform: uppercase;
+}
+.dad .icon2{
+    background: url('../img/site/icon2.png') center center no-repeat;
+    height: 100px;
+    left: 33%;
+}
+.dad .icon2.margin{
+    margin-top: -142px;
+}
+.dad .icon3{
+    background: url('../img/site/icon3.png') center center no-repeat;
+    height: 110px;
+    left: 66%
+}
+.dad .icon3.margin{
+    margin-top: -152px;
+}
+
+/* ==========================================================================
+   Scan & infos
+   ========================================================================== */
+.scan{
+    background: url('../img/site/scan.jpg') center center no-repeat;
+    background-attachment: fixed; 
+    background-size: cover;
+}
+.infos{
+    background: white;
+    background-attachment: fixed; 
+}
+.scan .align, .infos .align{
+    height: 160px;
+    left: 50%;
+    margin-left: -212px;
+    margin-top: -80px;
+    position: absolute;
+    top: 50%;
+    width: 445px;
+}
+.scan h1, .infos h1{
+    border-bottom: 2px dashed black;
+    color: #e34b3b;
+    font:50px "Helvetica LT Std";
+    font-weight: bold;
+    margin: 0 auto;
+    text-transform: uppercase;
+    text-align: center;
+    width: 230px;
+}
+.infos .align{
+    height: 100px;
+    margin-top: -50px;
+    margin-left: -385px;
+    width: 770px;
+}
+.infos h1{
+    width: 770px;
+}
+
+.scan h2, .infos h2{
+    color: black;
+    font:30px bold "Helvetica LT Std";
+    text-transform: uppercase;
+    text-align: center;
+}
+.infos h2{
+    text-transform: none;
+}
+.scan span{
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   NFC
+   ========================================================================== */
+.nfc{
+    background: #e34b3b;
+    background-attachment: fixed; 
+}
+.nfc .icon{
+    display: block;
+    position: absolute;
+    top: 50%;
+    margin-top: -135px;
+}
+.nfc .shirt{
+    background: url('../img/site/nfc_shirt.png');
+    height: 270px;
+    width: 422px;
+}
+.nfc .cross{
+    background: url('../img/site/nfc_cross.png');
+    height: 84px;
+    left: 50%;
+    margin-left: 35px;
+    margin-top: -42px;
+    width: 84px;
+}
+.nfc .phone{
+    background: url('../img/site/nfc_phone.png');
+    right: 0;
+    height: 270px;
+    width: 270px;
+}
+
+/* ==========================================================================
+   Page
+   ========================================================================== */
+.page{
+    background: url('../img/site/page.jpg') center center no-repeat;
+    background-attachment: fixed; 
+    background-size: cover;
+}
+.page .fiche{
+    height: 345px;
+    margin-top: -172px;
+    padding-left: 50px;
+    position: absolute;
+    top: 50%;
+    width: 50%;
+}
+.page .fiche:nth-child(2){
+    left: 50%;
+}
+.page h1{
+    color: black;
+    font:30px "Helvetica LT Std";
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+.page span{
+    color: #e34b3b;
+}
+.page .descr{
+    border-left: 2px solid #ddd8d2;
+    color: black;
+    font: 20px "Helvetica LT Std";
+    padding-left: 20px;
+}
+.page .descr span{
+    color: #e34b3b;
+    text-decoration: underline;
+}
+
+
+/* ==========================================================================
+   Contact
+   ========================================================================== */
+.contact{
+    background: url('../img/site/contact.jpg') center center repeat;
+}
+
+.arrow{
+    background: url('../img/site/arrow.png') no-repeat;
+    cursor: pointer;
+    display: block;
+    height: 35px;
+    margin-top: -17px;
+    position: absolute;
+    top: 50%;
+    width: 68px;
+}
+.btn_contact{
+    background: url('../img/site/btn_contact.jpg') no-repeat;
+    display: block;
+    height: 87px;
+    left: 50%;
+    margin-left: -239px;
+    margin-top: -43px;
+    position: absolute;
+    top: 50%;
+    width: 478px;
+}
+.fb{
+    background: url('../img/site/fb.png') no-repeat;
+    display: block;
+    height: 68px;
+    margin-top: -35px;
+    position: absolute;
+    right: 80px;
+    top: 50%;
+    width: 69px;
+}
+.twitter{
+    background: url('../img/site/twitter.png') no-repeat;
+    display: block;
+    height: 68px;
+    margin-top: -35px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 69px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .wrapper{
+        width: 640px;
+    }
+    .mobile .mobile_img{
+        background: none;
+    }
+    .dad .icon{
+        width: 200px;
+    }
+
+    .infos h1{
+        width: 400px;
+    }
+    .infos .align{
+        height: 200px;
+        margin-top: -100px;
+    }
+    .page .fiche{
+        height: 400px;
+        padding-left: 10px;
+        margin-top: -250px;
+    }
+    .fb{
+        right: 50%;
+        margin-top: 85px;
+        margin-right: 10px;
+    }
+    .twitter{
+        right: 50%;
+        margin-top: 85px;
+        margin-right: -78px;
+    }
+}
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

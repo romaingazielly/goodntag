@@ -38,11 +38,6 @@ $(function() {
 
         }
     });
-
-    // Bloc de connexion
-    $('#acc-connect').click(function(){
-
-    });
 });
 
 

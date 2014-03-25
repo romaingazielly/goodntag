@@ -1,0 +1,26 @@
+<div id="fb-root"></div>
+
+<script>
+window.fbAsyncInit = function() {
+    // init the FB JS SDK
+    FB.init({
+        appId      : '1405501526350819',                        // App ID from the app dashboard
+        channelUrl : '//haribofrance.com/dragibus/drawgibus/channel.html', // Channel file for x-domain comms
+        status     : true,                                 // Check Facebook Login status
+        xfbml      : true                                  // Look for social plugins on the page
+    });
+    FB.Canvas.setSize({ width: 810, height: 2300 });
+    FB.getLoginStatus(function(response){
+        init();
+    });
+};
+
+// Load the SDK asynchronously
+(function(d, s, id){
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/fr_FR/all.js";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
