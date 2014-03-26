@@ -95,6 +95,7 @@ $(function() {
 	Vote
 \*------------------------------------*/
 	var vote_affiche = true;
+	var dataCanvote = $('.product_vote').attr('date-canvote');
 
 	// Apparition du vote
 	$('#btn_vote').click(function(e) {
@@ -121,18 +122,21 @@ $(function() {
 	$('.can-vote .smiley li').click(function(e){
 		e.preventDefault();
 
-		var el = $('.can-vote');
-		el.removeClass('can-vote').addClass('cannot-vote');
+		if(dataCanvote == 'true') {
 
-		var vote = $(this).attr('data-vote');
+			var vote = $(this).attr('data-vote');
 
-		$('.smiley li').removeClass('active');
-		$(this).addClass('active');
-		$('.resultats_vote').fadeIn('slow');
-		$('.resultats_vote li span').css({'font-size': '40px', 'opacity':0});
-		$('.resultats_vote li span').animate({'font-size': '17px', 'opacity':1}, 600);
+			$('.smiley li').removeClass('active');
+			$(this).addClass('active');
+			$('.resultats_vote').fadeIn('slow');
+			$('.resultats_vote li span').css({'font-size': '40px', 'opacity':0});
+			$('.resultats_vote li span').animate({'font-size': '17px', 'opacity':1}, 600);
 
-		registerVote(vote);
+			registerVote(vote);
+		}
+		else {
+			alert('Vous devez être connecté pour pouvoir voter !');
+		}
 	});
 
 /*------------------------------------*\

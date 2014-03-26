@@ -60,7 +60,7 @@
 		<h1 id="product_name"><?php echo $post->post_title ?></h1>
 
 		<!-- Popin Rating -->
-		<section class="product_vote <?php if ($vote == '') : ?> can-vote <?php else: ?>cannot-vote<?php endif; ?>">
+		<section class="product_vote <?php if ($vote == '') : ?>can-vote<?php endif; ?>" <?php if(is_user_logged_in()) : ?>data-canvote="true" <?php else : ?>data-canvote="false"<?php endif; ?>>
 			<div class="bg-vote"></div>
 			<article class="vote">
 				<ul class="smiley clear">
