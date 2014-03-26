@@ -6,6 +6,9 @@
 	$id = get_the_ID();
 	$userId = get_current_user_id();
 
+	// register history
+	register_history_product($id);
+
 	// vote of current user
 	$voteUser = get_user_meta($userId, 'product_votes', true);
 
@@ -68,7 +71,7 @@
 					<li <?php if('neutral' == $vote) : ?>class="active"<?php endif; ?>id="vote_neutral" data-vote="neutral" ><a href="#" title="Neutre"></a></li>
 					<li <?php if('good' == $vote) : ?>class="active"<?php endif; ?>id="vote_good" data-vote="good" ><a href="#" title="Good"></a></li>
 				</ul>
-				<aside class="resultats_vote clear">
+				<aside class="resultats_vote clear" <?php if ($vote != '') : ?>style="display:block;"<?php else : ?>style="display:none;"<?php endif; ?>>
 					<ul class="clear">
 						<li id="vote_bad_results"><span><?php echo (int) $percentBad; ?>%</span></li>
 						<li id="vote_neutral_results"><span><?php echo (int) $percentNeutral; ?>%</span></li>

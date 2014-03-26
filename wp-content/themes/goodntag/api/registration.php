@@ -1,5 +1,7 @@
 <?php 
 
+date_default_timezone_set('Europe/Paris');
+
 /*
  * Registration custom funcs
  */
@@ -35,6 +37,24 @@ function site_router() {
 	if(count($url) == 1 && $url[0] == 'login'){
 		require('../page-login.php');
 	}
+}
+
+function register_history_product($productId) {
+	$userId = get_current_user_id();
+	$history = $favs = get_user_meta($userId, 'product_history', true);
+
+	if ($history) {
+		$ids = explode(',', $history);
+		if (!in_array($productId, $ids)) {
+			$history .= ','.$productId;
+		}
+	} else {
+		$history = $productId; 
+	}
+
+	update_user_meta($userId, 'product_seen_'.$productId, date('d/m/Y H:i'));
+
+	return update_user_meta($userId, 'product_history', $history);
 }
 
 add_action('send_headers', 'site_router');
