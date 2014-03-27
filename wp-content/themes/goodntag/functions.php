@@ -515,5 +515,25 @@ function delete_bad_fields()
 }
 add_action( 'admin_init', 'delete_bad_fields' );
 
-
+add_filter( 'avatar_defaults', 'newgravatar' );
+function newgravatar ($avatar_defaults) {
+    $myavatar = get_bloginfo('template_directory') . '/img/profile.png';
+    $avatar_defaults[$myavatar] = "Own";
+    return $avatar_defaults;
+}
+// hook failed login
+add_action('wp_login_failed', 'my_front_end_login_fail'); 
+ 
+function my_front_end_login_fail($username){
+    // Get the reffering page, where did the post submission come from?
+    $referrer = $_SERVER['HTTP_REFERER'];
+ 
+    // if there's a valid referrer, and it's not the default log-in screen
+    if(!empty($referrer) && !strstr($referrer,'wp-login') && !strstr($referrer,'wp-admin')){
+        // let's append some information (login=failed) to the URL for the theme to use
+        $referrerClean = str_replace('?login=failed', '', $referrer);
+        wp_redirect($referrerClean . '?login=failed'); 
+    exit;
+    }
+}
 ?>

@@ -16,6 +16,7 @@ define(ROOT, $root);
         <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="<?php echo ROOT; ?>/css/normalize.min.css" /> 
         <link rel="stylesheet" type="text/css" href="<?php echo ROOT; ?>/css/jquery.bxslider.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo ROOT; ?>/css/stackicons-min.css">
         <link rel="stylesheet" type="text/css" href="<?php echo ROOT; ?>/css/common.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo ROOT; ?>/css/marque.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo ROOT; ?>/css/produit.css" />   

@@ -58,15 +58,19 @@ header .smart_menu{ background: url('../img/menu_icon.png') center center no-rep
 .menu ul { margin:0; list-style:none; }
 .menu ul li { font:15px "Open Sans"; height:49px; line-height:49px;  text-transform:uppercase; border-top:solid 1px #cbcbcb; background:url('../img/arr_menu.png') no-repeat 235px center; }
 .menu ul li > a { display:block; padding:0 0 0 15px; color:#4c4c4c; }
-.menu ul li a:hover, .menu ul li a.active { background:#d6d6d6 url('../img/arr_menu.png') no-repeat 235px center; }
+.menu ul li a.active { background:#d6d6d6 url('../img/arr_menu.png') no-repeat 235px center; }
 .menu #infos_compte { height:auto; background:#fff; border:none; box-shadow: inset -8px 0px 14px -10px #9b9b9b; }
 .menu .flip {  padding:15px 0; background-size:contain; height:370px; }
 /*.menu .flip a { display:block;  width:150px; margin:0px auto; font:12px "Open Sans"; border:solid 1px #2b2b2b; text-align:center; height:30px; line-height:30px; background:rgba(255,255,255,0.9); }*/
+.menu .flip.failed .login-username input, .menu .flip.failed .login-password input{border:solid 1px red;}
 .menu .flip .login-username input, .menu .flip .login-password input, .menu .flip #loginform .login-submit #wp-submit, .menu #acc-register, .menu .logout{width:200px; margin:10px auto; font:12px "Open Sans"; border:solid 1px #2b2b2b;height:30px;  background:rgba(255,255,255,0.9);text-transform: uppercase;}
 .menu .flip #acc-register , .menu .logout{ display:block;height:30px;line-height:30px;margin-top:10px;color:black; padding:0 0 0 10px; margin:0 20px 0 30px;text-align: center;}
 .social_connect_ui {font-family:"Open Sans";margin: 0 auto; width: 200px;text-align: center;}
 .social_connect_ui p{height:30px;margin: 0;}
 .social_connect_form{margin: 0 auto; width: 160px;}
+.social_connect_form .st-icon-facebook:before { color:#e04a3a; }
+.social_connect_form .st-icon-twitter:before { color:#e04a3a; }
+.social_connect_form .st-icon-google:before { color:#e04a3a; }
 .menu .flap { display:none; }
 .menu #loginform { padding:10px 0 0 0; }
 .menu #loginform > p { margin:0 20px 0px; padding:0 0 0 10px; font:14px "Open Sans"; color:#4c4c4c; }

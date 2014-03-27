@@ -6,7 +6,6 @@
         <script src="<?php echo ROOT; ?>/js/dtap.js"></script>
         <script src="<?php echo ROOT; ?>/js/scripts.js"></script>
 
-        
 	</body>
-
+	
 </html>

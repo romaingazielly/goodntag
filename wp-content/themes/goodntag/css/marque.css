@@ -7,7 +7,7 @@
 .page_marque .slider_marque { overflow:hidden; }
 .page_marque .brand_slider li{ margin-top: -11px; }
 .page_marque .brand_slider li img { margin:auto;}
-.page_marque .brand_subtitle{ background: url('../img/brand_subtitle.png') repeat-x bottom; color: #fff; text-align: center; font: 500 18px "Open Sans"; height: 40px; line-height: 40px;}
+.page_marque .brand_subtitle{ background: url('../img/brand_subtitle.png') repeat-x bottom; color: #fff; text-align: center; font: 500 18px "Open Sans"; height: 40px; line-height: 40px;text-transform: uppercase;}
 .page_marque .brand_subtitle h1{ color: white; font-size: 18px; line-height: 40px; margin: 0; padding: 0; text-align: center; }
 .page_marque #brand_name{ text-align: center; text-transform: uppercase; margin: 10px auto;}
 

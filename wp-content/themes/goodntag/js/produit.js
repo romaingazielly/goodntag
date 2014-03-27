@@ -58,8 +58,6 @@ $(function() {
 
 	$(".slider_img").doubletap(function(){
 
-		console.log(alsoFav);
-
 		if(connected == 'true') {
 			if(alsoFav == 'true') {
 				deleteProductFav();
@@ -95,7 +93,8 @@ $(function() {
 	Vote
 \*------------------------------------*/
 	var vote_affiche = true;
-	var dataCanvote = $('.product_vote').attr('date-canvote');
+	var stats_affiche = $('.product_vote').attr('data-alreadyvote');
+	var dataCanvote = $('.product_vote').attr('data-canvote');
 
 	// Apparition du vote
 	$('#btn_vote').click(function(e) {
@@ -115,7 +114,7 @@ $(function() {
 				vote_affiche = true;
 			});
 		}
-
+console.log('coucou '+stats_affiche);
 	});
 
 	// Choix de vote
@@ -126,11 +125,16 @@ $(function() {
 
 			var vote = $(this).attr('data-vote');
 
-			$('.smiley li').removeClass('active');
-			$(this).addClass('active');
-			$('.resultats_vote').fadeIn('slow');
-			$('.resultats_vote li span').css({'font-size': '40px', 'opacity':0});
-			$('.resultats_vote li span').animate({'font-size': '17px', 'opacity':1}, 600);
+			if(!stats_affiche) {
+				$('.smiley li').removeClass('active');
+				$(this).addClass('active');
+
+				$('.resultats_vote').fadeIn('slow');
+				$('.resultats_vote li span').css({'font-size': '40px', 'opacity':0});
+				$('.resultats_vote li span').animate({'font-size': '17px', 'opacity':1}, 600);
+				stats_affiche = true;
+			}
+			
 
 			registerVote(vote);
 		}

@@ -20,7 +20,33 @@ $(function() {
 
 	$('.smart_menu').click(function(e) {
         e.preventDefault()
-        $('.menu').css({'height':pageHeight});
+        openMenu();
+    });
+
+	var getLocation = function () {
+		navigator.geolocation.getCurrentPosition(function (position) {
+			var lat = position.coords.latitude;
+			var lon = position.coords.longitude;
+			console.log(lat, lon);
+			var myLatlng = new google.maps.LatLng(lat, lon);
+			var marker = new google.maps.Marker({
+			      position: myLatlng,
+			      map: mapmap,
+			      title: 'Ma position'
+			  });
+
+			// mapmap.setCenter(myLatlng)
+		});
+	};
+
+	getLocation();
+
+});
+
+var smartMenuShowing = false;
+var pageHeight = $('.contenu').height();
+function openMenu(){
+	$('.menu').css({'height':pageHeight});
 
         if (smartMenuShowing) {
 
@@ -37,8 +63,17 @@ $(function() {
             smartMenuShowing = true;  
 
         }
-    });
+}
+
+$(document).ready(function(){
+	var login = $('.menu .flip').attr('data-log');
+	if(login == 0){
+		$('.menu .flip').addClass('failed');
+		openMenu();
+	}else{
+		if($('.menu .flip').hasClass('failed')){
+			$('.menu .flip').removeClass('failed');
+		}
+	}
 });
-
-
 

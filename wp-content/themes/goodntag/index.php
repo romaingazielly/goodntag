@@ -79,8 +79,9 @@ define(ROOT, $root);
                 </div>
             </div>
 
-            <div class="screen">
+            <div class="screen small">
                 <div class="scan parallax">
+                    <div class="bg_texte"></div>
                     <div class="wrapper">
                         <div class="align">
                             <h1>Scannez</h1>
@@ -100,8 +101,9 @@ define(ROOT, $root);
                 </div>
             </div>
 
-            <div class="screen">
+            <div class="screen small">
                 <div class="infos parallax">
+                    <div class="bg_texte"></div>
                     <div class="wrapper">
                         <div class="align">
                             <h1>Obtenez des informations</h1>
@@ -140,7 +142,7 @@ define(ROOT, $root);
                 </div>
             </div>
 
-            <div class="screen">
+            <div class="screen small">
                 <div class="contact parallax">
                     <div class="wrapper">
                         <div class="arrow"></div>

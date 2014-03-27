@@ -113,6 +113,10 @@ textarea {
     overflow: hidden;
     z-index: 1;
 }
+/*.screen.small{
+    height: 220px !important;
+    min-height: 0;
+}*/
 .parallax{
     top: 0px;
     position: absolute; 
@@ -233,14 +237,28 @@ textarea {
 /* ==========================================================================
    Scan & infos
    ========================================================================== */
+.bg_texte{
+    height: 120px;
+    margin-top: -100px;
+    width: 100%;
+    padding: 40px;
+    background: white;
+    opacity: 0.7;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+}
 .scan{
-    background: url('../img/site/scan.jpg') center center no-repeat;
+    background: url('../img/site/visu.jpg') center center no-repeat;
+    height: 100%;
     background-attachment: fixed; 
     background-size: cover;
 }
 .infos{
-    background: white;
-    background-attachment: fixed; 
+    background: url('../img/site/visu2.jpg') center center no-repeat;
+    height: 100%;
+    background-attachment: fixed;
+    background-size: cover;
 }
 .scan .align, .infos .align{
     height: 160px;
@@ -250,6 +268,7 @@ textarea {
     position: absolute;
     top: 50%;
     width: 445px;
+    z-index: 2;
 }
 .scan h1, .infos h1{
     border-bottom: 2px dashed black;
@@ -262,10 +281,11 @@ textarea {
     width: 230px;
 }
 .infos .align{
-    height: 100px;
-    margin-top: -50px;
-    margin-left: -385px;
+    height: 120px;
+    margin-top: -100px;
+    margin-left: -425px;
     width: 770px;
+    padding: 40px;
 }
 .infos h1{
     width: 770px;

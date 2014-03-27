@@ -95,7 +95,7 @@
 
 	<!-- Infos Lavage -->
 	<article class="infos_lavage">
-		<h1>S, M, L, XL / BLANC / 100% COTON</h1>
+		<h1><?php echo get_field('informations'); ?></h1>
 		<ul class="liste_pictos">
 			<li id="picto1" rev="50"><a href="#"></a></li>
 			<li id="picto2" rev="87"><a href="#"></a></li>
@@ -169,7 +169,7 @@
 			<?php $rubriques = get_field("rubriques");
 			foreach ($rubriques as $rubrique) { ?>
 			<li style="background:url('<?php echo $rubrique['image']['sizes']['brand_rubrique'];?> ') no-repeat; background-size:cover;">
-				<a href="#"><span><?php echo $rubrique['titre']; ?></span></a>
+				<a href="<?php echo $rubrique['lien']; ?>" target="_blank"><span><?php echo $rubrique['titre']; ?></span></a>
 			</li>
 		<?php }	?>
 	</article>
