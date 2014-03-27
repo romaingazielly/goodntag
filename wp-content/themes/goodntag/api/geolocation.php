@@ -62,7 +62,7 @@ function getCoordinatesFromAddress($address) {
 
 	$url = 'http://maps.google.com/maps/api/geocode/json?address='.str_replace(' ', '+', $address).'&sensor=false';
 	$ch = curl_init();
-		// Disable SSL verification
+	// Disable SSL verification
 	// curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 	// Will return the response, if false it print the response
 	// curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);

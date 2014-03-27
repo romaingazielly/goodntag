@@ -8,9 +8,13 @@
 		$logTest = 1;
 	}
 	
-?>
+if(is_user_logged_in()) {
+	echo '<nav class="menu logged">';
+}else{
+	echo '<nav class="menu notlog">';
+}
 
-<nav class="menu">
+?>
 	<ul>
 		<li id="infos_compte">
 			<div class="flip" data-log="<?php echo $logTest; ?>">
@@ -25,14 +29,15 @@
 					echo '<img class="profil-pic" src="" alt="" title="" />';
 					// var_dump($current_user);
 					if(!empty($current_user->user_firstname) || !empty($current_user->user_lastname)){
-						echo '<p>Bonjour <span class="user_firstname">'.$current_user->user_firstname . '</span> <span class="user_lastname">'.$current_user->user_lastname . '</span></p>';
+						echo '<div class="infos_user"><span class="user_firstname">'.$current_user->user_firstname . '</span><br/><span class="user_lastname">'.$current_user->user_lastname . '</span></div>';
 					}else if(!empty($current_user->display_name)){
-						echo '<p>Bonjour <span class="user_firstname">'.$current_user->display_name . '</span></p>';
+						echo '<div class="infos_user"><span class="user_firstname">'.$current_user->display_name . '</span></div>';
 					}else{
-						echo '<p>Bonjour <span class="user_firstname">'.$current_user->user_login . '</span></p>';
+						echo '<div class="infos_user"><span class="user_firstname">'.$current_user->user_login . '</span></div>';
 					}
 					
 				?>
+					<div class="clear"></div>
 					<a class="logout" href="<?php echo wp_logout_url( $_SERVER['REQUEST_URI'] ); ?>" title="Logout">Logout</a>
 				<?php }else{
 					wp_login_form();

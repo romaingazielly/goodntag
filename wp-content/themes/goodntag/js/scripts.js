@@ -38,31 +38,29 @@ $(function() {
 			// mapmap.setCenter(myLatlng)
 		});
 	};
-
 	getLocation();
 
 });
 
 var smartMenuShowing = false;
 var pageHeight = $('.contenu').height();
+
+
 function openMenu(){
 	$('.menu').css({'height':pageHeight});
 
-        if (smartMenuShowing) {
+    if (smartMenuShowing) {
+        // Décalage de la page
+        $('.contenu, header').animate({ left: '0px' }, 400, function(){
+            //$('.container').css({'overflow':'hidden'});
+        });
+        smartMenuShowing = false;
 
-            // Décalage de la page
-            $('.contenu, header').animate({ left: '0px' }, 400, function(){
-                //$('.container').css({'overflow':'hidden'});
-            });
-            smartMenuShowing = false;
-
-        } else {
-
-            // Décalage de la page
-            $('.contenu, header').animate({ left: '260px' }, 400);
-            smartMenuShowing = true;  
-
-        }
+    } else {
+        // Décalage de la page
+        $('.contenu, header').animate({ left: '260px' }, 400);
+        smartMenuShowing = true;
+    }
 }
 
 $(document).ready(function(){
@@ -75,5 +73,9 @@ $(document).ready(function(){
 			$('.menu .flip').removeClass('failed');
 		}
 	}
+
+	// Placeholder
+	$('#user_login').attr('placeholder', 'Identifiant');
+	$('#user_pass').attr('placeholder', '*******');
 });
 

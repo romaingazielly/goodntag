@@ -60,7 +60,11 @@ header .smart_menu{ background: url('../img/menu_icon.png') center center no-rep
 .menu ul li > a { display:block; padding:0 0 0 15px; color:#4c4c4c; }
 .menu ul li a.active { background:#d6d6d6 url('../img/arr_menu.png') no-repeat 235px center; }
 .menu #infos_compte { height:auto; background:#fff; border:none; box-shadow: inset -8px 0px 14px -10px #9b9b9b; }
-.menu .flip {  padding:15px 0; background-size:contain; height:370px; }
+.menu.notlog .flip {  padding:15px 0; background-size:contain; height:370px; }
+.menu.logged .flip{ height: 160px;}
+.menu .flip img{float:left;margin: 20px;}
+.menu .flip .profil-pic{margin: 0;}
+.menu .flip .infos_user{float: left;line-height: 20px;margin-top: 20px;padding-top: 10px;}
 /*.menu .flip a { display:block;  width:150px; margin:0px auto; font:12px "Open Sans"; border:solid 1px #2b2b2b; text-align:center; height:30px; line-height:30px; background:rgba(255,255,255,0.9); }*/
 .menu .flip.failed .login-username input, .menu .flip.failed .login-password input{border:solid 1px red;}
 .menu .flip .login-username input, .menu .flip .login-password input, .menu .flip #loginform .login-submit #wp-submit, .menu #acc-register, .menu .logout{width:200px; margin:10px auto; font:12px "Open Sans"; border:solid 1px #2b2b2b;height:30px;  background:rgba(255,255,255,0.9);text-transform: uppercase;}
@@ -74,10 +78,17 @@ header .smart_menu{ background: url('../img/menu_icon.png') center center no-rep
 .menu .flap { display:none; }
 .menu #loginform { padding:10px 0 0 0; }
 .menu #loginform > p { margin:0 20px 0px; padding:0 0 0 10px; font:14px "Open Sans"; color:#4c4c4c; }
-.menu #loginform > p label { display:block; margin:0 0 5px 0; }
-.menu #loginform > p input { padding:0 10px; font:14px "Open Sans"; }
+.menu #loginform > p label { margin:0 0 5px 0; }
+.menu #loginform > p input { padding:0 10px; font: 12px "Open Sans"; }
 .menu #loginform .login-remember { font-size:10px; vertical-align:bottom; text-transform:none; }
 .menu #loginform #wp-submit { padding:5px 10px; font:14px "Open Sans"; border:none; margin:0 0 10px 0;}
+.menu .login-username label{ display:none; }
+.menu .login-password label { display:none; }
+::-webkit-input-placeholder { color:#000; font-family: "Open Sans"; }
+::-moz-placeholder { color:#000; font-family: "Open Sans"; } /* firefox 19+ */
+:-ms-input-placeholder { color:#000; font-family: "Open Sans"; } /* ie */
+input:-moz-placeholder { color:#000; font-family: "Open Sans"; }
+
 
 /* Favoris */
 .favoris h1 { background:#f8f8f8; box-shadow: 0px 1px 15px -4px #656565; }
