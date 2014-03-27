@@ -41,7 +41,7 @@ function generate_map_all($lats, $lons, $addresses, $names)
 		$map->addMarkerByCoords($lats[$i], $lons[$i], $address, '<b>'.$names[$i].'</b><br />'.$address, $names[$i].'<br />'.$address);
 		$i++;
 	}
-
+	// var_dump($map); die();
 	$map->generate();
 
 	return $map->getGoogleMap();
@@ -61,16 +61,20 @@ function get_coords($address)
 function getCoordinatesFromAddress($address) {
 
 	$url = 'http://maps.google.com/maps/api/geocode/json?address='.str_replace(' ', '+', $address).'&sensor=false';
-
 	$ch = curl_init();
 		// Disable SSL verification
-	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+	// curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 	// Will return the response, if false it print the response
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	// curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 	// Set the url
 	curl_setopt($ch, CURLOPT_URL, $url);
+	curl_setopt($ch, CURLOPT_HEADER, 0);
+curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
+curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 	// Execute
 	$result = curl_exec($ch);
+	// var_dump($result); die();
 
 	$jsonData = json_decode($result, true);
 

@@ -116,6 +116,7 @@ header .smart_menu{ background: url('../img/menu_icon.png') center center no-rep
 .inscription form label { float:left; clear:right; font:14px "Open Sans"; width:50%; padding:5px 0 0 0; }
 .inscription form .checklabel { width: 85%; float:left; padding:0; }
 .inscription form input[type="text"], .inscription form input[type="password"], .inscription form input[type="email"] { float:right; height:30px; width:50%; padding:0 5px; font:14px "Open Sans"; }
-.inscription form input[type="checkbox"] { float:left; clear:left; margin:5px 20px 0 0; }
+.inscription form input[type="checkbox"]#cgu { float:left; clear:left; margin:5px 20px 10px 0; width:auto; }
+.inscription form input[type="checkbox"]#cgu +label { float:none;}
 .inscription form input[type="submit"] { border:none; width:80px; margin:auto;text-align: center; padding:10px 20px; text-transform:uppercase; color:#4c4c4c; background:#d6d6d6; }
 .inscription .alert-success { font:14px "Open Sans"; text-align:center; padding:50px 0; }

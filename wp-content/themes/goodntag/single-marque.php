@@ -14,9 +14,10 @@
 		if ($id == $brand[0]) {
 
 			$coordinates = getCoordinatesFromAddress(get_post_meta($store->ID, 'address', true));
+			
+			$addresses[] = get_post_meta($store->ID, 'address', true);
 			$lats[] = $coordinates['lat'];
 			$lons[] = $coordinates['lng'];
-			$addresses[] = get_post_meta($store->ID, 'address', true);
 			$names[] = $store->post_title;
 		}
 	}
@@ -36,7 +37,7 @@
                 <?php }   ?>
             </ul>
     	<?php } ?>
-    	<h1 class="brand_subtitle"><strong>COLLECTION PRINTEMPS</strong> 2013</h1>
+    	<h1 class="brand_subtitle"><strong><?php echo get_field('titre_image'); ?></strong></h1>
     </article>
     <!-- Slider End -->
 
@@ -105,29 +106,9 @@
 	<article class="pts_vente">
 		<h1><span>Point(s) de vente</span></h1>
 		<div class="map">
-			<?php echo generate_map_all($lats, $lons, $addresses, $names); ?>
-
-			<script type="text/javascript">
-
-			var getLocation = function () {
-				navigator.geolocation.getCurrentPosition(function (position) {
-					var lat = position.coords.latitude;
-					var lon = position.coords.longitude;
-					console.log(lat, lon);
-					var myLatlng = new google.maps.LatLng(lat, lon);
-					var marker = new google.maps.Marker({
-					      position: myLatlng,
-					      map: mapmap,
-					      title: 'Ma position'
-					  });
-
-					// mapmap.setCenter(myLatlng)
-				});
-			};
-
-			getLocation();
-
-			</script>
+			<?php 
+			var_dump($lats);
+			echo generate_map_all($lats, $lons, $addresses, $names); ?>
 		</div>
 	</article>
 	<!-- Points de vente End -->
@@ -153,13 +134,15 @@
 <script>
 	$(document).ready(function(){
 		var id = "<?php echo $id;?>";
-		$('.brand_slider').bxSlider({
-			auto: true,
-			controls:false,
-			touchEnabled: true,
-			swipeThreshold: 100,
-			pause: 6000
-		});
+		if($('.brand_slider li').length > 1){
+			$('.brand_slider').bxSlider({
+				auto: true,
+				controls:false,
+				touchEnabled: true,
+				swipeThreshold: 100,
+				pause: 6000
+			});
+		}
 		$('.product_slider').bxSlider({
 			infiniteLoop: false,
 		    slideWidth: 150,

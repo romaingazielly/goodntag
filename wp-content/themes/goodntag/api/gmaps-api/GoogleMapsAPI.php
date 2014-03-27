@@ -393,7 +393,7 @@ class GoogleMapAPI
 	 */
 	public function addMarkerByCoords($lat, $lng, $title, $html = '', $category = '', $icon = '') {
 		if ($icon == '') {
-			$icon = 'http://maps.gstatic.com/mapfiles/markers2/marker.png';
+			$icon = ROOT.'/img/marker-store.png';
 		}
 
 		// Save the lat/lon to enable the automatic center/zoom
