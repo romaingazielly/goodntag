@@ -182,7 +182,7 @@
 		$marque = get_field('brand');
 		$author = get_the_author();
 
-		$products = get_posts(array('post_type' => "produit", 'posts_per_page'=>4,'orderby' => 'rand','author_name' => $author ));
+		$products = get_posts(array('post_type' => "produit", 'posts_per_page'=>4,'orderby' => 'rand','author_name' => $author,'exclude'=>get_the_ID()));
 
 		foreach ($products as $product){
   			$image = get_field("image", $product->ID);

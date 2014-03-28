@@ -8,17 +8,12 @@
 		if ($history = get_user_meta($userId, 'product_history', true)) {
 			$products = explode(',', $history);
 		}
-	?>
 
-	<?php if($history == '') {
-			echo '<p class="no-fav">Vous n\'avez aucun historique</p>';
-		} 
 	?>
 
 	<article class="fav-product">
 			<ul>
-				<!-- history loop -->
-				<?php foreach ($products as $id): ?>
+				<?php foreach ($products as $id) : ?>
 				<li data-product-id="<?php echo $id ?>">
 
 				<?php $product = get_post($id); ?>
