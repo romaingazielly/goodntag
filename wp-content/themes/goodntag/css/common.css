@@ -55,24 +55,30 @@ header .smart_menu{ background: url('../img/menu_icon.png') center center no-rep
 
 /* Menu */
 .menu { position:absolute; top:0px; left:-260px; width:260px; background:#f3f3f3; box-shadow: inset -8px 0px 14px -10px #9b9b9b;}
+.menu.notlog { background:#fff; }
 .menu ul { margin:0; list-style:none; }
 .menu ul li { font:15px "Open Sans"; height:49px; line-height:49px;  text-transform:uppercase; border-top:solid 1px #cbcbcb; background:url('../img/arr_menu.png') no-repeat 235px center; }
 .menu ul li > a { display:block; padding:0 0 0 15px; color:#4c4c4c; }
 .menu ul li a.active { background:#d6d6d6 url('../img/arr_menu.png') no-repeat 235px center; }
 .menu #infos_compte { height:auto; background:#fff; border:none; box-shadow: inset -8px 0px 14px -10px #9b9b9b; }
+.menu #infos_compte p {margin:10px 0px; padding:0 25px;font: 11px "Open Sans"; text-transform:none; line-height:16px; text-align:center;}
+.menu #infos_compte p:first-child { margin:0; }
+.menu #infos_compte p.red { color:#e34b3b; font-weight:700; }
+.menu #infos_compte p.no-account { margin:0; font-weight:700 }
 .menu.notlog .flip {  padding:15px 0; background-size:contain;  }
-.menu.logged .flip{ height: 160px;}
+.menu.logged .flip{
+    padding: 0 0 10px 0;
+}
 .menu .flip img{float:left;margin: 20px;}
 .menu .flip .profil-pic{margin: 0;}
-.menu .flip .infos_user{float: left;line-height: 20px;margin-top: 20px;padding-top: 10px;}
+.menu .flip .infos_user{float: left;line-height: 20px;margin-top: 10px;padding-top: 10px;}
 /*.menu .flip a { display:block;  width:150px; margin:0px auto; font:12px "Open Sans"; border:solid 1px #2b2b2b; text-align:center; height:30px; line-height:30px; background:rgba(255,255,255,0.9); }*/
 .menu .flip.failed .login-username input, .menu .flip.failed .login-password input{border:solid 1px red;}
-.menu .flip .login-username input, .menu .flip .login-password input, .menu .flip #loginform .login-submit #wp-submit, .menu #acc-register, .menu .logout{width:200px; margin:10px auto; font:12px "Open Sans"; border:solid 1px #2b2b2b;height:30px;  background:rgba(255,255,255,0.9);text-transform: uppercase;}
-.menu .flip #acc-register , .menu .logout{ display:block;height:30px;line-height:30px;margin-top:10px;color:black; padding:0 0 0 10px; margin:0 20px 0 30px;text-align: center;}
+.menu .flip .login-username input, .menu .flip .login-password input, .menu .flip #loginform .login-submit #wp-submit, .menu #acc-register, .menu .logout{ margin:10px auto; }
+.menu .logout{ display:block;height:30px;line-height:30px;margin-top:10px;color:black; padding:0 0 0 10px; margin:0 20px 0 30px;text-align: center;}
 .social_connect_ui {font-family:"Open Sans";margin: 0 auto 10px; width: 200px;text-align: center;}
 .social_connect_ui p{margin: 3px 0 0 0;}
-.comment-form-social-connect {display: inline-block; float: left;}
-.social_connect_form { display:inline-block; margin: 0 auto;}
+.social_connect_form { margin: 0 auto;}
 .social_connect_form .st-icon-facebook:before { color:#e04a3a; }
 .social_connect_form .st-icon-twitter:before { color:#e04a3a; }
 .social_connect_form .st-icon-google:before { color:#e04a3a; }
@@ -80,9 +86,12 @@ header .smart_menu{ background: url('../img/menu_icon.png') center center no-rep
 .menu #loginform { padding:10px 0 0 0; }
 .menu #loginform > p { margin:0 20px 0px; padding:0 0 0 10px; font:14px "Open Sans"; color:#4c4c4c; }
 .menu #loginform > p label { margin:0 0 5px 0; }
-.menu #loginform > p input { padding:0 10px; font: 12px "Open Sans"; }
-.menu #loginform .login-remember { font-size:10px; vertical-align:bottom; text-transform:none; }
-.menu #loginform #wp-submit { padding:5px 10px; font:14px "Open Sans"; border:none; margin:0 0 10px 0;}
+.menu #loginform > p input[type="text"], .menu #loginform > p input[type="password"] { padding:0 10px; font: 12px "Open Sans"; height:25px; width:160px; margin:5px auto; border:solid 1px #2b2b2b; text-transform:uppercase; }
+.menu #loginform .login-remember { font-size:10px; vertical-align:bottom; text-transform:none; display:none; }
+.menu #loginform #wp-submit, #acc-register, .menu .logout { text-align:center; padding:5px 10px; font:700 15px "Open Sans"; color:#fff; border:none; margin:0 auto 10px; background:url('../img/bg-promo.png') 0 -7px; text-transform: none; height:34px; width:180px; display: block;}
+.menu #acc-register { margin-top:5px; }
+.menu .via{ font:700 16px "Open Sans"; text-transform:uppercase; color:#574e4d; }
+.menu .logout { }
 .menu .login-username label{ display:none; }
 .menu .login-password label { display:none; }
 ::-webkit-input-placeholder { color:#000; font-family: "Open Sans"; }

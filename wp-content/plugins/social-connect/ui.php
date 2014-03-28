@@ -24,7 +24,7 @@ function sc_render_login_form_social_connect( $args = NULL ) {
 		<div class="social_connect_ui <?php if( strpos( $_SERVER['REQUEST_URI'], 'wp-signup.php' ) ) echo 'mu_signup'; ?>">
 			<p class="comment-form-social-connect">
 			<?php if( $display_label !== false ) : ?>
-				<label><?php _e( 'Via :', 'social_connect' ); ?></label>
+				<label class="via"><?php _e( 'Via :', 'social_connect' ); ?></label>
 			<?php endif; ?>
 			<div class="social_connect_form">
 			<?php do_action ('social_connect_pre_form'); ?>

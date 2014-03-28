@@ -38,14 +38,17 @@ if(is_user_logged_in()) {
 					
 				?>
 					<div class="clear"></div>
-					<a class="logout" href="<?php echo wp_logout_url( $_SERVER['REQUEST_URI'] ); ?>" title="Logout">Logout</a>
+					<a class="logout" href="<?php echo wp_logout_url( $_SERVER['REQUEST_URI'] ); ?>" title="Logout">Se déconnecter</a>
 				<?php }else{
+					echo '<p class="red">Vous avez déjà un compte ?</p>';
+					echo '<p>Merci de vous connecter avec  votre e-mail et mot de passe</p>';
+
 					wp_login_form();
 					// $register = site_url("/register?redirect=" . $_SERVER['REQUEST_URI']); 
 					// echo '<a id="acc-register" href="'.$register.'">S\'enregistrer</a>';
 					do_action('social_connect_form'); ?>
 					
-
+					<p class="no-account">Vous n'avez pas de compte ?</p>
 					<a id="acc-register" href="<?php echo wp_registration_url(); ?>" title="Register">S'enregistrer</a>
 
 					
@@ -57,8 +60,10 @@ if(is_user_logged_in()) {
 		</li>
 		<!-- <li><a href="<?php echo $_SERVER['HTTP_REFERER']; ?>">Précèdent</a></li> -->
 		<!-- <li class="menu-link"><a href="<?php bloginfo('url') ?>/mon-profil">Mon profil</a></li> -->
-		<li class="menu-link"><a href="<?php bloginfo('url') ?>/favoris">Mes favoris</a></li>
-		<li class="menu-link"><a href="<?php bloginfo('url') ?>/historique">Historique</a></li>
+		<?php if(is_user_logged_in()) : ?>
+			<li class="menu-link"><a href="<?php bloginfo('url') ?>/favoris">Mes favoris</a></li>
+			<li class="menu-link"><a href="<?php bloginfo('url') ?>/historique">Historique</a></li>
+		<?php endif; ?>
 		<!-- <li><a href="#">Mes badges</a></li> -->
 	</ul>
 

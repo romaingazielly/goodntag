@@ -92,7 +92,7 @@
 
 	<hr>
 	<?php $marque = get_field('brand'); ?>
-	<a class="link-marque" href="<?php echo $marque->guid; ?>"><h1><?php echo $marque->post_title; ?></h1></a>
+	<a href="<?php echo $marque->guid; ?>" target="_blank"><h1><?php echo $marque->post_title; ?></h1></a>
 
 	<!-- Infos Lavage -->
 	<article class="infos_lavage">

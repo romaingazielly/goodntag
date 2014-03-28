@@ -75,7 +75,7 @@ $(document).ready(function(){
 	}
 
 	// Placeholder
-	$('#user_login').attr('placeholder', 'Identifiant');
+	$('#user_login').attr('placeholder', 'email');
 	$('#user_pass').attr('placeholder', '*******');
 });
 

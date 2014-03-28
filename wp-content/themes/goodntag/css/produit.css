@@ -42,6 +42,7 @@
 
 /* Infos Lavage */
 .page_produit .infos_lavage { text-align:center; width:100%; margin:10px 0 25px 0; }
+.page_produit .link-marque h1 { text-align:center; text-transform:uppercase; font:700 20px "Open Sans"; color:#2b2b2b; padding:10px 0 0 0; }
 .page_produit .infos_lavage h1 { text-align:center; font:300 16px "Open Sans"; color:#2b2b2b; }
 .page_produit .infos_lavage .liste_pictos { display:inline-block; margin:15px auto 5px; height:33px;}
 .page_produit .infos_lavage .liste_pictos li { width:33px; height:33px; float:left; list-style:none; margin-right:5px; }
