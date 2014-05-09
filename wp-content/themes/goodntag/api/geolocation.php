@@ -58,12 +58,22 @@ function get_coords($address)
 	return array('lat' => $place_lat, 'lng' => $place_lon);
 }
 
+function getCoordinates($address){
+ 
+	$address = str_replace(" ", "+", $address); // replace all the white space with "+" sign to match with google search pattern
+	$url = "http://maps.google.com/maps/api/geocode/json?sensor=false&address=$address";
+	$response = file_get_contents($url);
+	$json = json_decode($response,TRUE); //generate array object from the response from the web
+	return ($json['results'][0]['geometry']['location']['lat'].",".$json['results'][0]['geometry']['location']['lng']);
+ 
+}
+
 function getCoordinatesFromAddress($address) {
 
 	$url = 'http://maps.google.com/maps/api/geocode/json?address='.str_replace(' ', '+', $address).'&sensor=false';
 	$ch = curl_init();
 	// Disable SSL verification
-	// curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 	// Will return the response, if false it print the response
 	// curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 	// Set the url
@@ -74,7 +84,6 @@ function getCoordinatesFromAddress($address) {
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 	// Execute
 	$result = curl_exec($ch);
-	// var_dump($result); die();
 
 	$jsonData = json_decode($result, true);
 

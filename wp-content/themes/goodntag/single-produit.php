@@ -216,7 +216,8 @@
 	</section>
 
 	<script>
-		$(document).ready(function(){
+
+		(function($){
 
 			if($('.slider_img li').length > 1){
 				$('.slider_img').bxSlider({
@@ -228,6 +229,6 @@
 				});
 			}
 			
-		});
+		}) ();
 	</script>
 	<?php get_footer(); ?>

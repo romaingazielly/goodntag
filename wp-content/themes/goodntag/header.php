@@ -19,7 +19,7 @@ define(ROOT, $root);
         <link rel="stylesheet" type="text/css" href="<?php echo ROOT; ?>/css/stackicons-min.css">
         <link rel="stylesheet" type="text/css" href="<?php echo ROOT; ?>/css/common.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo ROOT; ?>/css/marque.css" />
-        <link rel="stylesheet" type="text/css" href="<?php echo ROOT; ?>/css/produit.css" />   
+        <link rel="stylesheet" type="text/css" href="<?php echo ROOT; ?>/css/produit.css" />
 
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />

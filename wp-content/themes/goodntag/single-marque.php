@@ -13,6 +13,7 @@
 		if ($id == $brand[0]) {
 			$teste = get_post_meta($store->ID, 'address', true);
 			$coordinates = getCoordinatesFromAddress($teste);
+			var_dump($coordinates);
 			$lats[] = $coordinates['lat'];
 			$lons[] = $coordinates['lng'];
 			$addresses[] = get_post_meta($store->ID, 'address', true);
